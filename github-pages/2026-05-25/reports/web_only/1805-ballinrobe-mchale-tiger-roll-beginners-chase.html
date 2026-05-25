@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6:05 Ballinrobe — McHale Tiger Roll Beginners Chase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#fbf7f1;--ink:#1d1b18;--muted:#5b544a;--accent:#0a7f87;--accent-soft:#e0f3f1;--line:#e4ded5;--panel:#ffffff;--shadow:0 10px 24px rgba(0,0,0,0.05);}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg) 0%,#ffffff 38%);}
+h1,h2,h3,h4{font-family:'IBM Plex Serif',serif;margin:0 0 .45rem 0;line-height:1.15;}
+p,li{line-height:1.55;}
+a{color:var(--accent);}
+code{font-family:'IBM Plex Mono',monospace;background:#f4efe8;padding:0.1rem 0.35rem;border-radius:6px;font-size:.92em;}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0;}
+.report-header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-start;padding:16px 20px;border-bottom:2px solid var(--line);background:var(--panel);}
+.brand-block{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:56px;height:56px;flex:0 0 auto}
+.brand-name{font-family:'IBM Plex Serif',serif;font-size:1.2rem;}
+.brand-tag{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;}
+.report-title{font-size:1.7rem;font-weight:700;}
+.report-sub{color:var(--muted);font-size:.92rem;}
+.report-intro{color:var(--muted);font-size:.86rem;max-width:70ch;margin-top:6px;}
+main{padding:18px 20px 28px;max-width:1380px;margin:0 auto;}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 16px;}
+.summary-card{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;}
+.summary-card .label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px;}
+.summary-card strong{font-size:1.15rem;}
+.viewer-shell{display:grid;grid-template-columns:minmax(280px,340px) minmax(0,1fr);gap:18px;align-items:start;}
+.sidebar{position:sticky;top:14px;display:flex;flex-direction:column;gap:14px;}
+.control-block label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px;}
+.control-block select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:.95rem;color:var(--ink);}
+.meeting-list{display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto;padding-right:4px;}
+.meeting-button{display:flex;justify-content:space-between;gap:10px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;}
+.meeting-button.active{border-color:var(--accent);background:var(--accent-soft);}
+.meeting-button small{color:var(--muted);}
+.race-list{display:flex;flex-direction:column;gap:8px;max-height:360px;overflow:auto;padding-right:4px;}
+.race-button{display:flex;flex-direction:column;gap:4px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;}
+.race-button.active{border-color:var(--accent);background:var(--accent-soft);}
+.race-button .time{font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.race-button .name{font-size:.92rem;font-weight:600;}
+.race-button .meta{font-size:.76rem;color:var(--muted);}
+.variant-switch{display:flex;gap:8px;flex-wrap:wrap;}
+.variant-btn{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer;font-size:.86rem;font-weight:600;}
+.variant-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.variant-btn[disabled]{opacity:.45;cursor:not-allowed;}
+.nav-strip{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;}
+.nav-links{display:flex;gap:8px;flex-wrap:wrap;}
+.nav-btn,.viewer-link,.variant-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:.84rem;font-weight:600;text-decoration:none;}
+.nav-btn:hover,.viewer-link:hover,.variant-link:hover{border-color:var(--accent);color:var(--accent);}
+.variant-link.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.variant-link.disabled{opacity:.45;pointer-events:none;}
+.nav-caption{font-size:.78rem;color:var(--muted);}
+.race-pager{display:flex;gap:8px;flex-wrap:wrap;}
+.race-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;}
+.meta-chip{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);}
+.meta-chip .label{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:4px;}
+.report-wrap{display:flex;flex-direction:column;gap:16px;}
+.viewer-status{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px;}
+.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:.76rem;font-weight:700;letter-spacing:.02em;}
+.badge.variant{background:var(--accent-soft);color:var(--accent);}
+.badge.status{background:#f6f1ea;color:#5b544a;}
+.article-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);}
+.article-body h2,.article-body h3,.article-body h4{margin-top:1.2rem;}
+.article-body h2:first-child,.article-body h3:first-child{margin-top:0;}
+.article-body ul,.article-body ol{padding-left:1.2rem;margin:0 0 .9rem;}
+.table-wrap{width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:.9rem;background:#fff;}
+th,td{padding:8px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+.empty-state{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px;background:#fff;}
+.report-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:.86rem;}
+.report-links a{text-decoration:none;}
+@media (max-width:1024px){.viewer-shell{grid-template-columns:1fr;}.sidebar{position:static;}}
+@media (max-width:720px){main{padding:12px 12px 18px;}.report-header{padding:14px 14px 12px;}.report-title{font-size:1.35rem;}.article-card{padding:14px 14px;}}
+</style>
+
+</head>
+<body>
+<header class="report-header">
+  <div class="brand-block">
+    <div class="logo-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0a7f87"/><path d="M18 16h8v12h12V16h8v32h-8V36H26v12h-8z" fill="#fff"/></svg></div>
+    <div>
+      <div class="brand-name">Hoofs</div>
+      <div class="brand-tag">AI Analysis Report</div>
+    </div>
+  </div>
+  <div class="report-meta">
+    <div class="report-title">6:05 Ballinrobe — McHale Tiger Roll Beginners Chase</div>
+    <div class="report-sub">Raw · 2026-05-25</div>
+    <div class="report-intro">This AI report was generated inside the Hoofs analysis workflow. Use the viewer or the navigation controls below to move between races and variants.</div>
+  </div>
+</header>
+<main>
+  
+            <section class="nav-strip">
+              <div>
+                <div class="nav-caption">Report Navigation</div>
+                <div class="nav-links"><a class="viewer-link" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C18%3A05%7C%7CMcHale+Tiger+Roll+Beginners+Chase&amp;variant=web_only">Open In Viewer</a></div>
+              </div>
+              <div>
+                <div class="nav-caption">Variants For This Race</div>
+                <div class="nav-links"><a class="variant-link active" href="1805-ballinrobe-mchale-tiger-roll-beginners-chase.html">Raw</a><a class="variant-link" href="../hybrid_raw/1805-ballinrobe-mchale-tiger-roll-beginners-chase.html">Hybrid</a><span class="variant-link disabled">Portal Led</span></div>
+              </div>
+              <div>
+                <div class="nav-caption">Move Between Races</div>
+                <div class="race-pager">
+                  <a class="nav-btn" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C17%3A35%7C%7CMcHale+Mayo+Handicap+Hurdle&amp;variant=web_only">Previous Race</a>
+                  <a class="nav-btn" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C18%3A35%7C%7CMcHale+Mayo+National+Handicap+Chase+%28Listed+Race%29&amp;variant=web_only">Next Race</a>
+                </div>
+              </div>
+            </section>
+            
+  <article class="article-card article-body">
+    <p><strong>1. Race Snapshot</strong></p>
+<ul>
+<li><strong>Race Name:</strong> McHale Tiger Roll Beginners Chase</li>
+<li><strong>Date:</strong> May 25, 2026</li>
+<li><strong>Time:</strong> 6:05 PM</li>
+<li><strong>Location:</strong> Ballinrobe Racecourse, Ireland</li>
+<li><strong>Distance:</strong> 2 miles 1 furlong 54 yards (approximately 3,400 meters)</li>
+<li><strong>Surface:</strong> Turf</li>
+<li><strong>Number of Runners:</strong> 13</li>
+<li><strong>Going:</strong> Good to Yielding in places</li>
+<li><strong>Prize Money:</strong> €13,000</li>
+<li><strong>Winner:</strong> €7,800</li>
+<li><strong>2nd Place:</strong> €2,600</li>
+<li><strong>3rd Place:</strong> €1,300</li>
+<li><strong>4th Place:</strong> €650</li>
+</ul>
+<p><strong>2. External Data Coverage</strong></p>
+<p>The available data includes the racecard and form information for the 13 runners. However, detailed sectional times for previous races are not accessible. Consequently, the Sectional Time Summary Table will indicate &quot;unavailable&quot; for all runners.</p>
+<p><strong>3. Sectional Time Summary Table</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse Name</th><th>Best Final 3f Time</th><th>Source</th></tr></thead><tbody><tr><td>Arkhill</td><td>Unavailable</td><td></td></tr><tr><td>Bobbysingindablues</td><td>Unavailable</td><td></td></tr><tr><td>Davy Crockett</td><td>Unavailable</td><td></td></tr><tr><td>Kovanis</td><td>Unavailable</td><td></td></tr><tr><td>Listentillitellyea</td><td>Unavailable</td><td></td></tr><tr><td>Must Go Now</td><td>Unavailable</td><td></td></tr><tr><td>Net Boy</td><td>Unavailable</td><td></td></tr><tr><td>Positive Energy</td><td>Unavailable</td><td></td></tr><tr><td>Scalpnagoon</td><td>Unavailable</td><td></td></tr><tr><td>Smooth Tom</td><td>Unavailable</td><td></td></tr><tr><td>Sony Bill</td><td>Unavailable</td><td></td></tr><tr><td>Jolie Jewel</td><td>Unavailable</td><td></td></tr><tr><td>Glen To Glen</td><td>Unavailable</td><td></td></tr></tbody></table></div>
+<p><strong>4. Sectional-Based Ranking</strong></p>
+<p>Due to the unavailability of sectional times, a sectional-based ranking cannot be provided.</p>
+<p><strong>5. Pace / Draw / Tactical Shape</strong></p>
+<ul>
+<li><strong>Pace Analysis:</strong> The race features a mix of runners with varying levels of experience and form. Without sectional times, it&#x27;s challenging to predict the exact pace dynamics. However, horses with recent competitive form may set a moderate to fast pace.</li>
+</ul>
+<ul>
+<li><strong>Draw Bias:</strong> Ballinrobe&#x27;s track is generally fair, with no significant draw bias. All runners will have an equal opportunity regardless of their starting positions.</li>
+</ul>
+<ul>
+<li><strong>Tactical Shape:</strong> Given the distance and the mix of experience levels, the race is likely to be tactical. Experienced chasers may adopt a prominent position, while less experienced runners might be held up to conserve energy for a late challenge.</li>
+</ul>
+<p><strong>6. Weighted Scoring Model</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse Name</th><th>Ability Rating</th><th>Conditions Rating</th><th>Tactical Rating</th><th>Current-Form Rating</th><th>Final Composite Score</th></tr></thead><tbody><tr><td>Arkhill</td><td>60</td><td>55</td><td>50</td><td>45</td><td>55</td></tr><tr><td>Bobbysingindablues</td><td>40</td><td>45</td><td>50</td><td>30</td><td>41</td></tr><tr><td>Davy Crockett</td><td>70</td><td>65</td><td>60</td><td>50</td><td>61</td></tr><tr><td>Kovanis</td><td>65</td><td>60</td><td>55</td><td>50</td><td>57</td></tr><tr><td>Listentillitellyea</td><td>50</td><td>55</td><td>60</td><td>40</td><td>50</td></tr><tr><td>Must Go Now</td><td>45</td><td>50</td><td>55</td><td>35</td><td>45</td></tr><tr><td>Net Boy</td><td>60</td><td>55</td><td>50</td><td>45</td><td>52</td></tr><tr><td>Positive Energy</td><td>40</td><td>45</td><td>50</td><td>30</td><td>41</td></tr><tr><td>Scalpnagoon</td><td>65</td><td>60</td><td>55</td><td>50</td><td>57</td></tr><tr><td>Smooth Tom</td><td>70</td><td>65</td><td>60</td><td>50</td><td>61</td></tr><tr><td>Sony Bill</td><td>75</td><td>70</td><td>65</td><td>60</td><td>68</td></tr><tr><td>Jolie Jewel</td><td>55</td><td>60</td><td>55</td><td>45</td><td>54</td></tr><tr><td>Glen To Glen</td><td>60</td><td>55</td><td>50</td><td>45</td><td>52</td></tr></tbody></table></div>
+<p><strong>7. Runner Notes</strong></p>
+<ul>
+<li><strong>Arkhill:</strong> A 7-year-old gelding with a point-to-point victory. Made a promising start in a hunter chase at Cork but has been off for 13 months. Uncertain about the drop in trip.</li>
+</ul>
+<ul>
+<li><strong>Bobbysingindablues:</strong> A 6-year-old gelding with modest hurdling form. Pulled up on chase debut at Kilbeggan, losing touch early. Down in trip for this race.</li>
+</ul>
+<ul>
+<li><strong>Davy Crockett:</strong> A 5-year-old gelding with a promising start in bumpers and novice hurdles. Disappointing in handicaps since but switched to chasing, which might spark a revival.</li>
+</ul>
+<ul>
+<li><strong>Kovanis:</strong> A 6-year-old gelding with a bumper and maiden hurdle win. Highly tried in Graded novice hurdles over the winter. Returned from a 3-month break with a ninth-place finish in a handicap hurdle at Fairyhouse. Easy winner of his sole point outing, so should get back on the up now chasing.</li>
+</ul>
+<ul>
+<li><strong>Listentillitellyea:</strong> A 10-year-old gelding who ran well in listed handicaps at Fairyhouse and Punchestown earlier last spring but was an early faller at Galway when last seen 9 months earlier. Amongst the form picks if not too rusty after an absence.</li>
+</ul>
+<ul>
+<li><strong>Must Go Now:</strong> A 9-year-old gelding with his best recent effort in handicap hurdles when third at Cork in March. Down the field on previous try over fences earlier that month and others are preferred.</li>
+</ul>
+<ul>
+<li><strong>Net Boy:</strong> A 7-year-old gelding who is a fairly useful hurdler and found improvement when a creditable second of 9 in a handicap hurdle at Ballinrobe in July. Unseated early on chase debut at Leopardstown in March but remains the type to make a better chaser.</li>
+</ul>
+<ul>
+<li><strong>Positive Energy:</strong> A 5-year-old gelding who went backwards following a winning hurdle debut at Navan last spring and was always behind on debut for this yard at Punchestown earlier in the month. Others preferred now chasing.</li>
+</ul>
+<ul>
+<li><strong>Scalpnagoon:</strong> A 6-year-old gelding who is fairly useful over hurdles and translated that ability to chasing at the second time of asking when third in a 17f Cork maiden last month. Would&#x27;ve finished closer if not for bungling 2 out when runner-up in a 6-runner Down Royal novice 3 weeks ago and sets the standard of those with experience.</li>
+</ul>
+<ul>
+<li><strong>Smooth Tom:</strong> A 7-year-old gelding who is a useful hurdler and landed a match race at Cork in August. Ran well when last seen on the Flat at the Curragh in October and he&#x27;s an intriguing newcomer to chasing (not particularly bred for the discipline).</li>
+</ul>
+<ul>
+<li><strong>Sony Bill:</strong> A 5-year-old gelding who produced an improved effort when fourth of 18 in a listed handicap hurdle at Fairyhouse in April and backed that up with a creditable fifth in another big-field handicap at the Punchestown Festival 3 weeks ago. Makes plenty of appeal on chase bow.</li>
+</ul>
+<ul>
+<li><strong>Jolie Jewel:</strong> A 7-year-old mare who hit the target at Thurles in November but was below par when nearer last than first at Leopardstown in December. Merely passed beaten horses into sixth in a Punchestown handicap hurdle 4 weeks ago. Makes chase debut.</li>
+</ul>
+<ul>
+<li><strong>Glen To Glen:</strong> A 4-year-old gelding who is a useful Flat performer and left his first 2 runs over hurdles behind to win a 17f Cork juvenile in December. Disappointing in the Fred Winter at Cheltenham next time and a similar story back on the Flat on his last 2 outings, so has questions to answer now chasing.</li>
+</ul>
+<p><strong>8. Probability / Fair Odds / Value Table</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse Name</th><th>True Winning Probability</th><th>Fair Odds</th><th>Overlay/Value Opportunity</th><th>Confidence Level</th><th>Main Risks</th></tr></thead><tbody><tr><td>Arkhill</td><td>10%</td><td>9/1</td><td>Low</td><td>Medium</td><td>Uncertain fitness after 13 months off</td></tr><tr><td>Bobbysingindablues</td><td>5%</td><td>19/1</td><td>Low</td><td>Medium</td><td>Poor recent form</td></tr><tr><td>Davy Crockett</td><td>15%</td><td>5/1</td><td>Medium</td><td>High</td><td>Inconsistent recent performances</td></tr><tr><td>Kovanis</td><td>12%</td><td>7/1</td><td>Medium</td><td>High</td><td>Recent form not ideal</td></tr><tr><td>Listentillitellyea</td><td>8%</td><td>11/1</td><td>Low</td><td>Medium</td><td>Long absence</td></tr><tr><td>Must Go Now</td><td>6%</td><td>16/1</td><td>Low</td><td>Medium</td><td>Limited chasing experience</td></tr><tr><td>Net Boy</td><td>10%</td><td>9/1</td><td>Low</td><td>Medium</td><td>Unseated on chase debut</td></tr><tr><td>Positive Energy</td><td>5%</td><td>19/1</td><td>Low</td><td>Medium</td><td>Poor recent form</td></tr><tr><td>Scalpnagoon</td><td>12%</td><td>7/1</td><td>Medium</td><td>High</td><td>Recent jumping errors</td></tr><tr><td>Smooth Tom</td><td>15%</td><td>5/1</td><td>Medium</td><td>High</td><td>Unproven over fences</td></tr><tr><td>Sony Bill</td><td>20%</td><td>4/1</td><td>High</td><td>High</td><td>Strong recent form</td></tr><tr><td>Jolie Jewel</td><td>8%</td><td>11/1</td><td>Low</td><td>Medium</td><td>Inconsistent performances</td></tr><tr><td>Glen To Glen</td><td>7%</td><td>13/1</td><td>Low</td><td>Medium</td><td>Disappointing recent runs</td></tr></tbody></table></div>
+<p><strong>9. Betting Verdict</strong></p>
+<p>The race presents a competitive field with several runners having mixed form and varying levels of experience over fences. Sony Bill stands out with strong recent performances and a promising chase debut, making him a solid contender. Davy Crockett and Smooth Tom also show potential but have some inconsistencies to address. Arkhill&#x27;s long absence raises concerns about fitness, while others like Bobbysingindablues and Positive Energy have shown poor recent form.</p>
+<p><strong>10. Final Rankings</strong></p>
+<ol>
+<li>Sony Bill</li>
+<li>Davy Crockett</li>
+<li>Smooth Tom</li>
+<li>Scalpnagoon</li>
+<li>Kovanis</li>
+<li>Arkhill</li>
+<li>Net Boy</li>
+<li>Jolie Jewel</li>
+<li>Glen To Glen</li>
+<li>Listentillitellyea</li>
+<li>Must Go Now</li>
+<li>Positive Energy</li>
+<li>Bobbysingindablues</li>
+</ol>
+  </article>
+</main>
+</body>
+</html>

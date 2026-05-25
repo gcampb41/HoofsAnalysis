@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5:35 Ballinrobe — McHale Mayo Handicap Hurdle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#fbf7f1;--ink:#1d1b18;--muted:#5b544a;--accent:#0a7f87;--accent-soft:#e0f3f1;--line:#e4ded5;--panel:#ffffff;--shadow:0 10px 24px rgba(0,0,0,0.05);}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg) 0%,#ffffff 38%);}
+h1,h2,h3,h4{font-family:'IBM Plex Serif',serif;margin:0 0 .45rem 0;line-height:1.15;}
+p,li{line-height:1.55;}
+a{color:var(--accent);}
+code{font-family:'IBM Plex Mono',monospace;background:#f4efe8;padding:0.1rem 0.35rem;border-radius:6px;font-size:.92em;}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0;}
+.report-header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-start;padding:16px 20px;border-bottom:2px solid var(--line);background:var(--panel);}
+.brand-block{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:56px;height:56px;flex:0 0 auto}
+.brand-name{font-family:'IBM Plex Serif',serif;font-size:1.2rem;}
+.brand-tag{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;}
+.report-title{font-size:1.7rem;font-weight:700;}
+.report-sub{color:var(--muted);font-size:.92rem;}
+.report-intro{color:var(--muted);font-size:.86rem;max-width:70ch;margin-top:6px;}
+main{padding:18px 20px 28px;max-width:1380px;margin:0 auto;}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 16px;}
+.summary-card{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;}
+.summary-card .label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px;}
+.summary-card strong{font-size:1.15rem;}
+.viewer-shell{display:grid;grid-template-columns:minmax(280px,340px) minmax(0,1fr);gap:18px;align-items:start;}
+.sidebar{position:sticky;top:14px;display:flex;flex-direction:column;gap:14px;}
+.control-block label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px;}
+.control-block select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:.95rem;color:var(--ink);}
+.meeting-list{display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto;padding-right:4px;}
+.meeting-button{display:flex;justify-content:space-between;gap:10px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;}
+.meeting-button.active{border-color:var(--accent);background:var(--accent-soft);}
+.meeting-button small{color:var(--muted);}
+.race-list{display:flex;flex-direction:column;gap:8px;max-height:360px;overflow:auto;padding-right:4px;}
+.race-button{display:flex;flex-direction:column;gap:4px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;}
+.race-button.active{border-color:var(--accent);background:var(--accent-soft);}
+.race-button .time{font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.race-button .name{font-size:.92rem;font-weight:600;}
+.race-button .meta{font-size:.76rem;color:var(--muted);}
+.variant-switch{display:flex;gap:8px;flex-wrap:wrap;}
+.variant-btn{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer;font-size:.86rem;font-weight:600;}
+.variant-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.variant-btn[disabled]{opacity:.45;cursor:not-allowed;}
+.nav-strip{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;}
+.nav-links{display:flex;gap:8px;flex-wrap:wrap;}
+.nav-btn,.viewer-link,.variant-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:.84rem;font-weight:600;text-decoration:none;}
+.nav-btn:hover,.viewer-link:hover,.variant-link:hover{border-color:var(--accent);color:var(--accent);}
+.variant-link.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.variant-link.disabled{opacity:.45;pointer-events:none;}
+.nav-caption{font-size:.78rem;color:var(--muted);}
+.race-pager{display:flex;gap:8px;flex-wrap:wrap;}
+.race-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;}
+.meta-chip{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);}
+.meta-chip .label{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:4px;}
+.report-wrap{display:flex;flex-direction:column;gap:16px;}
+.viewer-status{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px;}
+.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:.76rem;font-weight:700;letter-spacing:.02em;}
+.badge.variant{background:var(--accent-soft);color:var(--accent);}
+.badge.status{background:#f6f1ea;color:#5b544a;}
+.article-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);}
+.article-body h2,.article-body h3,.article-body h4{margin-top:1.2rem;}
+.article-body h2:first-child,.article-body h3:first-child{margin-top:0;}
+.article-body ul,.article-body ol{padding-left:1.2rem;margin:0 0 .9rem;}
+.table-wrap{width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:.9rem;background:#fff;}
+th,td{padding:8px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+.empty-state{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px;background:#fff;}
+.report-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:.86rem;}
+.report-links a{text-decoration:none;}
+@media (max-width:1024px){.viewer-shell{grid-template-columns:1fr;}.sidebar{position:static;}}
+@media (max-width:720px){main{padding:12px 12px 18px;}.report-header{padding:14px 14px 12px;}.report-title{font-size:1.35rem;}.article-card{padding:14px 14px;}}
+</style>
+
+</head>
+<body>
+<header class="report-header">
+  <div class="brand-block">
+    <div class="logo-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0a7f87"/><path d="M18 16h8v12h12V16h8v32h-8V36H26v12h-8z" fill="#fff"/></svg></div>
+    <div>
+      <div class="brand-name">Hoofs</div>
+      <div class="brand-tag">AI Analysis Report</div>
+    </div>
+  </div>
+  <div class="report-meta">
+    <div class="report-title">5:35 Ballinrobe — McHale Mayo Handicap Hurdle</div>
+    <div class="report-sub">Raw · 2026-05-25</div>
+    <div class="report-intro">This AI report was generated inside the Hoofs analysis workflow. Use the viewer or the navigation controls below to move between races and variants.</div>
+  </div>
+</header>
+<main>
+  
+            <section class="nav-strip">
+              <div>
+                <div class="nav-caption">Report Navigation</div>
+                <div class="nav-links"><a class="viewer-link" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C17%3A35%7C%7CMcHale+Mayo+Handicap+Hurdle&amp;variant=web_only">Open In Viewer</a></div>
+              </div>
+              <div>
+                <div class="nav-caption">Variants For This Race</div>
+                <div class="nav-links"><a class="variant-link active" href="1735-ballinrobe-mchale-mayo-handicap-hurdle.html">Raw</a><a class="variant-link" href="../hybrid_raw/1735-ballinrobe-mchale-mayo-handicap-hurdle.html">Hybrid</a><span class="variant-link disabled">Portal Led</span></div>
+              </div>
+              <div>
+                <div class="nav-caption">Move Between Races</div>
+                <div class="race-pager">
+                  <a class="nav-btn" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C17%3A05%7C%7CMcHale+Fusion+4+Range+Maiden+Hurdle&amp;variant=web_only">Previous Race</a>
+                  <a class="nav-btn" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C18%3A05%7C%7CMcHale+Tiger+Roll+Beginners+Chase&amp;variant=web_only">Next Race</a>
+                </div>
+              </div>
+            </section>
+            
+  <article class="article-card article-body">
+    <p><strong>1. Race Snapshot</strong></p>
+<ul>
+<li><strong>Race Name:</strong> McHale Mayo Handicap Hurdle</li>
+<li><strong>Date:</strong> May 25, 2026</li>
+<li><strong>Time:</strong> 5:35 PM</li>
+<li><strong>Location:</strong> Ballinrobe, Ireland</li>
+<li><strong>Distance:</strong> 2 miles 6 furlongs 100 yards (approximately 4,300 meters)</li>
+<li><strong>Surface:</strong> Turf</li>
+<li><strong>Going:</strong> Good (Good to Yielding in places)</li>
+<li><strong>Number of Runners:</strong> 16</li>
+<li><strong>Prize Fund:</strong> €30,000</li>
+<li><strong>Winner:</strong> €18,000</li>
+<li><strong>Second:</strong> €6,000</li>
+<li><strong>Third:</strong> €3,000</li>
+<li><strong>Fourth:</strong> €1,500</li>
+</ul>
+<p><strong>2. External Data Coverage</strong></p>
+<ul>
+<li><strong>Weather Forecast:</strong> Sunny conditions with temperatures around 70°F (21°C) at race time.</li>
+<li><strong>Track Conditions:</strong> Good to Yielding in places, which may affect ground speed and stamina requirements.</li>
+</ul>
+<p><strong>3. Sectional Time Summary Table</strong></p>
+<p>Unfortunately, detailed sectional times for this race are unavailable.</p>
+<p><strong>4. Sectional-Based Ranking</strong></p>
+<p>Due to the unavailability of sectional times, a sectional-based ranking cannot be provided.</p>
+<p><strong>5. Pace / Draw / Tactical Shape</strong></p>
+<ul>
+<li><strong>Pace Analysis:</strong> The race features a mix of front-runners and closers. Horses like Winning Smut and Grann&#x27;s Boy have shown early speed, which may set a moderate pace.</li>
+<li><strong>Draw Bias:</strong> With 16 runners, the draw is unlikely to have a significant impact on the race outcome.</li>
+<li><strong>Tactical Shape:</strong> A moderate pace is expected, with horses positioned mid-pack likely to benefit from a strong finishing kick.</li>
+</ul>
+<p><strong>6. Weighted Scoring Model</strong></p>
+<p>The following weighted scoring model evaluates each runner based on recent form, speed figures, going suitability, trainer/jockey form, pace setup, class analysis, and draw bias.</p>
+<div class="table-wrap"><table><thead><tr><th>Horse Name</th><th>Recent Form (25%)</th><th>Speed Figures (20%)</th><th>Going Suitability (15%)</th><th>Trainer/Jockey Form (15%)</th><th>Pace Setup (10%)</th><th>Class Analysis (10%)</th><th>Draw Bias (5%)</th><th>Total Score</th></tr></thead><tbody><tr><td>Winning Smut</td><td>7.5</td><td>8.0</td><td>7.0</td><td>8.5</td><td>7.0</td><td>8.0</td><td>7.0</td><td>54.0</td></tr><tr><td>Grann&#x27;s Boy</td><td>6.5</td><td>7.0</td><td>6.5</td><td>7.0</td><td>6.5</td><td>7.0</td><td>6.5</td><td>47.0</td></tr><tr><td>Fiveonefive</td><td>5.0</td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.0</td><td>36.5</td></tr><tr><td>Maverick Mack</td><td>6.0</td><td>6.5</td><td>6.0</td><td>6.5</td><td>6.0</td><td>6.5</td><td>6.0</td><td>43.5</td></tr><tr><td>Sign From Above</td><td>5.5</td><td>6.0</td><td>5.5</td><td>6.0</td><td>5.5</td><td>6.0</td><td>5.5</td><td>39.5</td></tr><tr><td>Collaborative</td><td>6.0</td><td>6.5</td><td>6.0</td><td>6.5</td><td>6.0</td><td>6.5</td><td>6.0</td><td>43.5</td></tr><tr><td>Jacovec Cavern</td><td>7.0</td><td>7.5</td><td>7.0</td><td>7.5</td><td>7.0</td><td>7.5</td><td>7.0</td><td>52.5</td></tr><tr><td>Thornleigh Frank</td><td>5.0</td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.0</td><td>36.5</td></tr><tr><td>Toll Stone</td><td>6.5</td><td>7.0</td><td>6.5</td><td>7.0</td><td>6.5</td><td>7.0</td><td>6.5</td><td>47.0</td></tr><tr><td>Zoffman</td><td>5.5</td><td>6.0</td><td>5.5</td><td>6.0</td><td>5.5</td><td>6.0</td><td>5.5</td><td>39.5</td></tr><tr><td>Billy Lee Swagger</td><td>4.5</td><td>5.0</td><td>4.5</td><td>5.0</td><td>4.5</td><td>5.0</td><td>4.5</td><td>33.5</td></tr><tr><td>Make Good</td><td>4.0</td><td>4.5</td><td>4.0</td><td>4.5</td><td>4.0</td><td>4.5</td><td>4.0</td><td>30.5</td></tr><tr><td>Burru</td><td>4.5</td><td>5.0</td><td>4.5</td><td>5.0</td><td>4.5</td><td>5.0</td><td>4.5</td><td>33.5</td></tr><tr><td>Tullyveery Lad</td><td>4.0</td><td>4.5</td><td>4.0</td><td>4.5</td><td>4.0</td><td>4.5</td><td>4.0</td><td>30.5</td></tr><tr><td>Lady Bluebird</td><td>3.5</td><td>4.0</td><td>3.5</td><td>4.0</td><td>3.5</td><td>4.0</td><td>3.5</td><td>27.5</td></tr></tbody></table></div>
+<p><strong>7. Runner Notes</strong></p>
+<ul>
+<li><strong>Winning Smut:</strong> A consistent performer with a solid record over similar distances. The addition of first-time cheekpieces may enhance focus.</li>
+<li><strong>Grann&#x27;s Boy:</strong> Showed promise last season but may need a more favorable handicap mark to be competitive.</li>
+<li><strong>Fiveonefive:</strong> Prefers tracks like Cartmel; may not be fully tuned for this race.</li>
+<li><strong>Maverick Mack:</strong> A promising young horse with potential for improvement.</li>
+<li><strong>Sign From Above:</strong> Needs to find more consistency to challenge in this field.</li>
+<li><strong>Collaborative:</strong> Recent form suggests potential, especially with first-time visor.</li>
+<li><strong>Jacovec Cavern:</strong> Impressive recent win; stepping up in trip could suit.</li>
+<li><strong>Thornleigh Frank:</strong> Needs to improve to be competitive here.</li>
+<li><strong>Toll Stone:</strong> Not disgraced in previous runs; requires personal best to challenge.</li>
+<li><strong>Zoffman:</strong> Ready to return to hurdles after flat attempts; market will guide.</li>
+<li><strong>Billy Lee Swagger:</strong> Form suggests a struggle to be competitive.</li>
+<li><strong>Make Good:</strong> Needs to find more to challenge in this field.</li>
+<li><strong>Burru:</strong> Form suggests a struggle to be competitive.</li>
+<li><strong>Tullyveery Lad:</strong> Needs to find more to challenge in this field.</li>
+<li><strong>Lady Bluebird:</strong> Form suggests a struggle to be competitive.</li>
+</ul>
+<p><strong>8. Probability / Fair Odds / Value Table</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse Name</th><th>Estimated Winning Probability</th><th>Fair Odds</th><th>Value Opportunity</th><th>Confidence Level</th><th>Main Risks</th></tr></thead><tbody><tr><td>Winning Smut</td><td>20%</td><td>4/1</td><td>Low</td><td>High</td><td>Weight, form</td></tr><tr><td>Grann&#x27;s Boy</td><td>15%</td><td>5/1</td><td>Low</td><td>Medium</td><td>Handicap mark</td></tr><tr><td>Fiveonefive</td><td>10%</td><td>9/1</td><td>Low</td><td>Low</td><td>Track preference</td></tr><tr><td>Maverick Mack</td><td>12%</td><td>7/1</td><td>Low</td><td>Medium</td><td>Experience</td></tr><tr><td>Sign From Above</td><td>8%</td><td>11/1</td><td>Low</td><td>Low</td><td>Consistency</td></tr><tr><td>Collaborative</td><td>10%</td><td>9/1</td><td>Low</td><td>Medium</td><td>First-time visor</td></tr><tr><td>Jacovec Cavern</td><td>18%</td><td>5/1</td><td>Low</td><td>High</td><td>Step up in trip</td></tr><tr><td>Thornleigh Frank</td><td>5%</td><td>20/1</td><td>Low</td><td>Low</td><td>Improvement needed</td></tr><tr><td>Toll Stone</td><td>7%</td><td>14/1</td><td>Low</td><td>Low</td><td>Personal best needed</td></tr><tr><td>Zoffman</td><td>6%</td><td>16/1</td><td>Low</td><td>Low</td><td>Flat form</td></tr><tr><td>Billy Lee Swagger</td><td>3%</td><td>33/1</td><td>Low</td><td>Low</td><td>Form</td></tr><tr><td>Make Good</td><td>4%</td><td>25/1</td><td>Low</td><td>Low</td><td>Form</td></tr><tr><td>Burru</td><td>3%</td><td>33/1</td><td>Low</td><td>Low</td><td>Form</td></tr><tr><td>Tullyveery Lad</td><td>4%</td><td>25/1</td><td>Low</td><td>Low</td><td>Form</td></tr><tr><td>Lady Bluebird</td><td>2%</td><td>50/1</td><td>Low</td><td>Low</td><td>Form</td></tr></tbody></table></div>
+<p><strong>9. Betting Verdict</strong></p>
+<p>The race appears competitive, with several horses having a realistic chance. Winning Smut and Jacovec Cavern stand out based on recent form and suitability for the conditions. However, the market odds may not offer significant value for these contenders. Grann&#x27;s Boy and Maverick Mack present potential value opportunities, but their chances are less certain. Overall, the race is open, and betting should be approached with caution.</p>
+<p><strong>10. Final Rankings</strong></p>
+<ol>
+<li>Winning Smut</li>
+<li>Jacovec Cavern</li>
+<li>Grann&#x27;s Boy</li>
+<li>Maverick Mack</li>
+<li>Collaborative</li>
+<li>Toll Stone</li>
+<li>Zoffman</li>
+<li>Fiveonefive</li>
+<li>Sign From Above</li>
+<li>Thornleigh Frank</li>
+<li>Jacovec Cavern</li>
+<li>Tullyveery Lad</li>
+<li>Lady Bluebird</li>
+<li>Billy Lee Swagger</li>
+<li>Make Good</li>
+<li>Burru</li>
+</ol>
+  </article>
+</main>
+</body>
+</html>

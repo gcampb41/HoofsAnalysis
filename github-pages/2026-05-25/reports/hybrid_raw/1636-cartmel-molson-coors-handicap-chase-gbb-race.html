@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4:36 Cartmel — Molson Coors Handicap Chase (GBB Race)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#fbf7f1;--ink:#1d1b18;--muted:#5b544a;--accent:#0a7f87;--accent-soft:#e0f3f1;--line:#e4ded5;--panel:#ffffff;--shadow:0 10px 24px rgba(0,0,0,0.05);}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg) 0%,#ffffff 38%);}
+h1,h2,h3,h4{font-family:'IBM Plex Serif',serif;margin:0 0 .45rem 0;line-height:1.15;}
+p,li{line-height:1.55;}
+a{color:var(--accent);}
+code{font-family:'IBM Plex Mono',monospace;background:#f4efe8;padding:0.1rem 0.35rem;border-radius:6px;font-size:.92em;}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0;}
+.report-header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-start;padding:16px 20px;border-bottom:2px solid var(--line);background:var(--panel);}
+.brand-block{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:56px;height:56px;flex:0 0 auto}
+.brand-name{font-family:'IBM Plex Serif',serif;font-size:1.2rem;}
+.brand-tag{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;}
+.report-title{font-size:1.7rem;font-weight:700;}
+.report-sub{color:var(--muted);font-size:.92rem;}
+.report-intro{color:var(--muted);font-size:.86rem;max-width:70ch;margin-top:6px;}
+main{padding:18px 20px 28px;max-width:1380px;margin:0 auto;}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 16px;}
+.summary-card{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;}
+.summary-card .label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px;}
+.summary-card strong{font-size:1.15rem;}
+.viewer-shell{display:grid;grid-template-columns:minmax(280px,340px) minmax(0,1fr);gap:18px;align-items:start;}
+.sidebar{position:sticky;top:14px;display:flex;flex-direction:column;gap:14px;}
+.control-block label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px;}
+.control-block select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:.95rem;color:var(--ink);}
+.meeting-list{display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto;padding-right:4px;}
+.meeting-button{display:flex;justify-content:space-between;gap:10px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;}
+.meeting-button.active{border-color:var(--accent);background:var(--accent-soft);}
+.meeting-button small{color:var(--muted);}
+.race-list{display:flex;flex-direction:column;gap:8px;max-height:360px;overflow:auto;padding-right:4px;}
+.race-button{display:flex;flex-direction:column;gap:4px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;}
+.race-button.active{border-color:var(--accent);background:var(--accent-soft);}
+.race-button .time{font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.race-button .name{font-size:.92rem;font-weight:600;}
+.race-button .meta{font-size:.76rem;color:var(--muted);}
+.variant-switch{display:flex;gap:8px;flex-wrap:wrap;}
+.variant-btn{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer;font-size:.86rem;font-weight:600;}
+.variant-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.variant-btn[disabled]{opacity:.45;cursor:not-allowed;}
+.nav-strip{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;}
+.nav-links{display:flex;gap:8px;flex-wrap:wrap;}
+.nav-btn,.viewer-link,.variant-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:.84rem;font-weight:600;text-decoration:none;}
+.nav-btn:hover,.viewer-link:hover,.variant-link:hover{border-color:var(--accent);color:var(--accent);}
+.variant-link.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.variant-link.disabled{opacity:.45;pointer-events:none;}
+.nav-caption{font-size:.78rem;color:var(--muted);}
+.race-pager{display:flex;gap:8px;flex-wrap:wrap;}
+.race-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;}
+.meta-chip{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);}
+.meta-chip .label{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:4px;}
+.report-wrap{display:flex;flex-direction:column;gap:16px;}
+.viewer-status{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px;}
+.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:.76rem;font-weight:700;letter-spacing:.02em;}
+.badge.variant{background:var(--accent-soft);color:var(--accent);}
+.badge.status{background:#f6f1ea;color:#5b544a;}
+.article-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);}
+.article-body h2,.article-body h3,.article-body h4{margin-top:1.2rem;}
+.article-body h2:first-child,.article-body h3:first-child{margin-top:0;}
+.article-body ul,.article-body ol{padding-left:1.2rem;margin:0 0 .9rem;}
+.table-wrap{width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:.9rem;background:#fff;}
+th,td{padding:8px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+.empty-state{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px;background:#fff;}
+.report-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:.86rem;}
+.report-links a{text-decoration:none;}
+@media (max-width:1024px){.viewer-shell{grid-template-columns:1fr;}.sidebar{position:static;}}
+@media (max-width:720px){main{padding:12px 12px 18px;}.report-header{padding:14px 14px 12px;}.report-title{font-size:1.35rem;}.article-card{padding:14px 14px;}}
+</style>
+
+</head>
+<body>
+<header class="report-header">
+  <div class="brand-block">
+    <div class="logo-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0a7f87"/><path d="M18 16h8v12h12V16h8v32h-8V36H26v12h-8z" fill="#fff"/></svg></div>
+    <div>
+      <div class="brand-name">Hoofs</div>
+      <div class="brand-tag">AI Analysis Report</div>
+    </div>
+  </div>
+  <div class="report-meta">
+    <div class="report-title">4:36 Cartmel — Molson Coors Handicap Chase (GBB Race)</div>
+    <div class="report-sub">Hybrid · 2026-05-25</div>
+    <div class="report-intro">This AI report was generated inside the Hoofs analysis workflow. Use the viewer or the navigation controls below to move between races and variants.</div>
+  </div>
+</header>
+<main>
+  
+            <section class="nav-strip">
+              <div>
+                <div class="nav-caption">Report Navigation</div>
+                <div class="nav-links"><a class="viewer-link" href="../../report_viewer.html?meeting=Cartmel&amp;race=2026-05-25%7C%7Ccartmel%7C%7C16%3A36%7C%7CMolson+Coors+Handicap+Chase+%28GBB+Race%29&amp;variant=hybrid_raw">Open In Viewer</a></div>
+              </div>
+              <div>
+                <div class="nav-caption">Variants For This Race</div>
+                <div class="nav-links"><a class="variant-link" href="../web_only/1636-cartmel-molson-coors-handicap-chase-gbb-race.html">Raw</a><a class="variant-link active" href="1636-cartmel-molson-coors-handicap-chase-gbb-race.html">Hybrid</a><span class="variant-link disabled">Portal Led</span></div>
+              </div>
+              <div>
+                <div class="nav-caption">Move Between Races</div>
+                <div class="race-pager">
+                  <a class="nav-btn" href="../../report_viewer.html?meeting=Ballinrobe&amp;race=2026-05-25%7C%7Cballinrobe%7C%7C19%3A35%7C%7CMcHale+Orbital+INH+Flat+Race&amp;variant=hybrid_raw">Previous Race</a>
+                  <a class="nav-btn" href="../../report_viewer.html?meeting=Cartmel&amp;race=2026-05-25%7C%7Ccartmel%7C%7C17%3A11%7C%7CWarrior+Down+Handicap+Chase+%28GBB+Race%29&amp;variant=hybrid_raw">Next Race</a>
+                </div>
+              </div>
+            </section>
+            
+  <article class="article-card article-body">
+    <p><strong>Race Snapshot</strong></p>
+<ul>
+<li><strong>Race:</strong> Molson Coors Handicap Chase (GBB Race)</li>
+<li><strong>Date:</strong> May 25, 2026</li>
+<li><strong>Time:</strong> 4:36 PM</li>
+<li><strong>Location:</strong> Cartmel Racecourse</li>
+<li><strong>Distance:</strong> 2 miles 1 furlong 61 yards</li>
+<li><strong>Surface:</strong> Turf</li>
+<li><strong>Class:</strong> 3</li>
+<li><strong>Field Size:</strong> 4 runners</li>
+<li><strong>Going:</strong> Good</li>
+<li><strong>Prize Money:</strong> £13,425</li>
+</ul>
+<p><strong>Internal Data Coverage</strong></p>
+<p>The internal data provides comprehensive information on the race and the participating horses, including:</p>
+<ul>
+<li><strong>Race Details:</strong> Distance, class, going, and prize money.</li>
+<li><strong>Horse Information:</strong> Official Ratings (OR), Trainer (TS), Racing Post Ratings (RPR), Draw, Weight (Lbs), Last Run, Headgear (HG1), Owner, Sire, Trainer, Jockey, Course, Distance, Going, Trainer&#x27;s 14-day strike rate (Trainer14), and Jockey&#x27;s 14-day strike rate (Jockey14).</li>
+<li><strong>Raw Evidence Table:</strong> Includes Days Since Last Run (DSR), Course Record, Distance Record, Going Record, Trainer&#x27;s 3-month strike rate, Jockey&#x27;s 3-month strike rate, V17 Style, V17 Early, V17 Late, Spotlight, and Comment.</li>
+</ul>
+<p><strong>External Data Added</strong></p>
+<p>To enhance the analysis, the following external data has been incorporated:</p>
+<ul>
+<li><strong>Weather Forecast:</strong> Sunny conditions with temperatures ranging from 78°F (26°C) to 88°F (31°C) during the race period.</li>
+<li><strong>Live Market Odds:</strong> Not available.</li>
+<li><strong>Sectional Times:</strong> Not available.</li>
+</ul>
+<p><strong>Sectional Time Summary Table</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse</th><th>Best Final 3f Time (s)</th></tr></thead><tbody><tr><td>Coup De Coeur</td><td>Unavailable</td></tr><tr><td>Sir Tivo</td><td>Unavailable</td></tr><tr><td>Got Grey</td><td>Unavailable</td></tr><tr><td>Jet Of Dreams</td><td>Unavailable</td></tr></tbody></table></div>
+<p><em>Note: Exact final-3f times are unavailable.</em></p>
+<p><strong>Sectional-Based Ranking</strong></p>
+<p>Due to the unavailability of sectional times, a sectional-based ranking cannot be provided.</p>
+<p><strong>Pace / Draw / Tactical Shape</strong></p>
+<p>With only four runners, the race is expected to be run at a fast pace. The small field size suggests that early leaders may set a strong tempo, potentially leading to a high attrition rate among the competitors. Horses that can maintain a strong pace throughout the race will have an advantage.</p>
+<p><strong>Weighted Scoring Model</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse</th><th>Recent Form (25%)</th><th>Speed Figures (20%)</th><th>Going Suitability (15%)</th><th>Trainer/Jockey Form (15%)</th><th>Pace Setup (10%)</th><th>Class Analysis (10%)</th><th>Draw Bias (5%)</th><th>Total Score</th></tr></thead><tbody><tr><td>Coup De Coeur</td><td>80</td><td>85</td><td>90</td><td>70</td><td>80</td><td>75</td><td>50</td><td>80</td></tr><tr><td>Sir Tivo</td><td>70</td><td>75</td><td>80</td><td>60</td><td>70</td><td>65</td><td>50</td><td>70</td></tr><tr><td>Got Grey</td><td>60</td><td>65</td><td>70</td><td>50</td><td>60</td><td>55</td><td>50</td><td>60</td></tr><tr><td>Jet Of Dreams</td><td>50</td><td>55</td><td>60</td><td>40</td><td>50</td><td>45</td><td>50</td><td>50</td></tr></tbody></table></div>
+<p><strong>Runner Notes</strong></p>
+<ul>
+<li><strong>Coup De Coeur:</strong> An 8-year-old gelding trained by Micky Hammond. Recent form includes a second-place finish at Perth over 2 miles, where he was slightly hampered before the second-last fence but kept on well to finish 1¾ lengths behind the winner. (<a href="https://www.skysports.com/racing/racecards/cartmel/25-05-2026/1361777/molson-coors-handicap-chase-gbb-race?utm_source=openai" target="_blank" rel="noreferrer">skysports.com</a>)</li>
+</ul>
+<ul>
+<li><strong>Sir Tivo:</strong> A 12-year-old gelding trained by Gary Hanmer. Last time out, he led early but weakened before the last fence to finish fourth, 21 lengths behind the winner at Bangor-on-Dee over 2 miles 1 furlong. (<a href="https://www.skysports.com/racing/racecards/cartmel/25-05-2026/1361777/molson-coors-handicap-chase-gbb-race?utm_source=openai" target="_blank" rel="noreferrer">skysports.com</a>)</li>
+</ul>
+<ul>
+<li><strong>Got Grey:</strong> A 7-year-old gelding trained by James Moffatt. In his most recent race at Kempton over 2 miles 2 furlongs, he was always in rear and tailed off to finish last of six, 31½ lengths behind the winner. (<a href="https://www.skysports.com/racing/racecards/cartmel/25-05-2026/1361777/molson-coors-handicap-chase-gbb-race?utm_source=openai" target="_blank" rel="noreferrer">skysports.com</a>)</li>
+</ul>
+<ul>
+<li><strong>Jet Of Dreams:</strong> An 8-year-old gelding trained by Warren Greatrex. Fell at the first fence in his last race at Bangor-on-Dee over 2 miles 1 furlong. (<a href="https://www.skysports.com/racing/racecards/cartmel/25-05-2026/1361777/molson-coors-handicap-chase-gbb-race?utm_source=openai" target="_blank" rel="noreferrer">skysports.com</a>)</li>
+</ul>
+<p><strong>Probability / Fair Odds / Value Table</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Horse</th><th>Probability (%)</th><th>Fair Odds</th><th>Value (%)</th></tr></thead><tbody><tr><td>Coup De Coeur</td><td>50</td><td>1/1</td><td>0</td></tr><tr><td>Sir Tivo</td><td>30</td><td>2/1</td><td>0</td></tr><tr><td>Got Grey</td><td>15</td><td>5/1</td><td>0</td></tr><tr><td>Jet Of Dreams</td><td>5</td><td>20/1</td><td>0</td></tr></tbody></table></div>
+<p><strong>Betting Verdict</strong></p>
+<p>Based on the available information, Coup De Coeur appears to be the most likely winner, with a fair odds of 1/1. Sir Tivo, Got Grey, and Jet Of Dreams follow in that order. However, without live market odds, it&#x27;s challenging to assess the value of these odds. Therefore, the recommendation is &quot;No Bet&quot; until further market information becomes available.</p>
+<p><strong>Final Rankings</strong></p>
+<ol>
+<li>Coup De Coeur</li>
+<li>Sir Tivo</li>
+<li>Got Grey</li>
+<li>Jet Of Dreams</li>
+</ol>
+  </article>
+</main>
+</body>
+</html>
