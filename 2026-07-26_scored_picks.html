@@ -1,0 +1,3081 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W7KLXLD8N8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W7KLXLD8N8');
+</script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>Race Analysis - 26th July 2026 UK &amp; Ireland.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Serif:wght@500;700&display=swap');
+:root {
+  --bg: #fbf7f1;
+  --ink: #1d1b18;
+  --muted: #5b544a;
+  --accent: #0a7f87;
+  --line: #e4ded5;
+  --panel: #ffffff;
+  --gold: #d4af37;
+  --silver: #a8adb4;
+  --bronze: #b87333;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 38%);
+}
+h1, h2, h3, h4 { font-family: 'IBM Plex Serif', serif; margin: 0 0 0.35rem 0; }
+main { padding: 18px 20px 28px; max-width: 1200px; margin: 0 auto; }
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 20px;
+  border-bottom: 2px solid var(--line);
+  background: var(--panel);
+}
+.brand-block { display: flex; align-items: center; gap: 12px; }
+.brand-name { font-family: 'IBM Plex Serif', serif; font-size: 1.15rem; }
+.brand-tag { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; }
+.logo-mark { border-radius: 12px; overflow: hidden; }
+.logo-mark svg { width: 100%; height: 100%; display: block; }
+.report-meta { flex: 1; }
+.report-title { font-size: 1.5rem; font-weight: 700; }
+.report-sub { color: var(--muted); font-size: 0.85rem; }
+.report-intro { margin-top: 6px; font-size: 0.82rem; color: var(--muted); line-height: 1.4; max-width: 820px; }
+.report-intro a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.report-intro a:hover { text-decoration: underline; }
+.course-title { margin: 18px 0 6px; font-size: 1.1rem; color: var(--accent); }
+.sticky-nav {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+  background: rgba(251, 247, 241, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 10px 0 14px;
+}
+body.filters-live .sticky-nav { display: block; }
+.sticky-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.sticky-nav label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.sticky-nav select {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  min-width: 180px;
+}
+.sticky-nav .race-jump { min-width: 260px; }
+.sticky-nav .consensus-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px 8px;
+}
+.sticky-nav .consensus-title {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.sticky-nav .consensus-controls label {
+  font-size: 0.78rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+.sticky-nav input[type="checkbox"] { margin-right: 4px; vertical-align: middle; }
+.sticky-nav .consensus-controls select { min-width: 90px; }
+.filter-note { margin-top: 6px; font-size: 0.78rem; color: var(--muted); }
+.telegram-fallback {
+  margin: 10px 0 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+body.filters-live .telegram-fallback { display: none; }
+.telegram-fallback h3 { margin: 0 0 6px 0; font-size: 0.92rem; }
+.telegram-fallback p { margin: 0 0 8px 0; font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
+.telegram-fallback .fallback-row { margin: 6px 0; font-size: 0.8rem; color: var(--muted); }
+.telegram-fallback .fallback-row strong { color: var(--ink); }
+.telegram-fallback details { margin: 6px 0; font-size: 0.8rem; }
+.telegram-fallback summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+.telegram-fallback ul { margin: 6px 0 0 16px; padding: 0; }
+.telegram-fallback li { margin: 2px 0; }
+.telegram-fallback a { color: var(--accent); text-decoration: none; }
+.telegram-fallback a:hover { text-decoration: underline; }
+.sticky-nav .top-link {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.sticky-nav .top-link:hover { text-decoration: underline; }
+.race-page { padding: 10px 0 14px; border-bottom: 1px solid var(--line); }
+.race { scroll-margin-top: 86px; }
+.race-title { font-size: 1rem; font-weight: 700; }
+.meta-line { font-size: 0.8rem; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+.race-links { margin-top: 6px; display: flex; gap: 8px; flex-wrap: wrap; }
+.race-link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f9f6f0;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.race-link-chip:hover { text-decoration: underline; }
+.confidence-pill { font-weight: 700; font-size: 0.86rem; color: var(--ink); }
+.section-title {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.table-wrap { margin-top: 8px; overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+th, td { border-bottom: 1px solid var(--line); padding: 4px 6px; text-align: left; vertical-align: top; }
+th { font-weight: 600; color: #514b42; background: #f3efe8; }
+tbody tr:nth-child(odd) { background: #fbfaf7; }
+.field-table td { white-space: nowrap; }
+.field-table td.col-horse, .field-table td.col-conn { white-space: normal; }
+.field-table .rank-top { background: #e8f3f2; font-weight: 600; }
+.score-bar {
+  position: relative;
+  height: 10px;
+  min-width: 70px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.08),
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 4%
+  );
+  background-color: #f9f6f0;
+  overflow: hidden;
+}
+.score-bar span {
+  display: block;
+  height: 100%;
+  background: #0a7f87;
+  opacity: 0.65;
+}
+.dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55);
+  vertical-align: middle;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  color: #1d1b18;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.55);
+}
+.gold {
+  background: radial-gradient(circle at 32% 30%, #fff7cc 0 20%, var(--gold) 62%);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.30), 0 1px 4px rgba(0, 0, 0, 0.22);
+}
+.silver {
+  background: radial-gradient(circle at 32% 30%, #f6f8fb 0 20%, var(--silver) 62%);
+  box-shadow: 0 0 0 2px rgba(168, 173, 180, 0.28), 0 1px 4px rgba(0, 0, 0, 0.20);
+}
+.bronze {
+  background: radial-gradient(circle at 32% 30%, #ffe2cc 0 20%, var(--bronze) 62%);
+  box-shadow: 0 0 0 2px rgba(184, 115, 51, 0.28), 0 1px 4px rgba(0, 0, 0, 0.20);
+}
+.field-table td.dot-cell { text-align: center; min-width: 28px; }
+.meta-line a { color: var(--accent); text-decoration: none; }
+.meta-line a:hover { text-decoration: underline; }
+@media screen and (max-width: 980px) {
+  .report-header { flex-direction: column; align-items: flex-start; }
+  .report-meta { width: 100%; }
+  .sticky-nav .top-link { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<header class="report-header">
+<div class="brand-block">
+<div class="logo-mark" style="width:56px;height:56px"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0a7f87"/><path d="M18 16h8v12h12V16h8v32h-8V36H26v12h-8z" fill="#fff"/></svg></div>
+<div>
+<div class="brand-name">Hoofs</div>
+<div class="brand-tag">Race Analysis Report</div>
+</div>
+</div>
+<div class="report-meta">
+<div class="report-title">Race Analysis - 26th July 2026 UK &amp; Ireland.</div>
+<div class="report-sub">from the developer (gavin) About Hoofs</div>
+<div class="report-intro">Hoofs is a free, independent project built around data, modelling and transparent reporting. The daily reports are shared openly for anyone who enjoys digging into racing structure, probabilities and execution.</div>
+<div class="report-intro">If you find the work valuable, please consider taking out a paid subscription on Substack: <a href="https://substack.com/@hoofs">https://substack.com/@hoofs</a>.</div>
+<div class="report-intro">Paid subscriptions directly support the data, infrastructure and ongoing model development behind the reports - and genuinely help keep the project alive and improving. Your support allows Hoofs to remain independent, transparent and freely accessible.</div>
+</div>
+</header>
+<main>
+<div class="sticky-nav">
+<div class="sticky-nav-inner">
+<label for="track-filter">Track</label>
+<select id="track-filter" onchange="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" oninput="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()">
+<option value="all" selected>All tracks</option>
+<option value="Pontefract">Pontefract</option>
+<option value="Uttoxeter">Uttoxeter</option>
+</select>
+<label for="confidence-filter">Confidence</label>
+<select id="confidence-filter" onchange="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" oninput="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()">
+<option value="all" selected>All</option>
+<option value="10">10/10</option>
+<option value="9">9/10</option>
+<option value="8">8/10</option>
+<option value="7">7/10</option>
+<option value="6">6/10</option>
+<option value="5">5/10</option>
+<option value="4">4/10</option>
+<option value="3">3/10</option>
+<option value="2">2/10</option>
+<option value="1">1/10</option>
+</select>
+<div class="consensus-controls">
+<span class="consensus-title">Top1 Consensus</span>
+<label><input type="checkbox" id="cons-v11" onchange="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" onclick="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" />V11</label>
+<label><input type="checkbox" id="cons-v12" onchange="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" onclick="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" />V12</label>
+<label><input type="checkbox" id="cons-v17" onchange="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" onclick="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" />V17</label>
+<select id="cons-mode" title="Consensus mode" onchange="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()" oninput="window.hoofsOnFilterChange&&window.hoofsOnFilterChange()">
+<option value="any" selected>OR</option>
+<option value="all">AND</option>
+</select>
+</div>
+<label for="race-jump">Race</label>
+<select id="race-jump" class="race-jump" onchange="window.hoofsJumpTo&&window.hoofsJumpTo(this.value)" oninput="window.hoofsJumpTo&&window.hoofsJumpTo(this.value)"></select>
+<a class="top-link" href="#top">Top</a>
+</div>
+<div id="no-races-message" class="filter-note" style="display:none;">No races match current filters.</div>
+</div>
+<section class="telegram-fallback" id="telegram-fallback">
+<h3>Telegram-Safe Quick Filters</h3>
+<p>If the dropdown filters do nothing in Telegram file preview, that viewer is blocking JavaScript. Use these quick links instead.</p>
+<div class="fallback-row"><strong>Track:</strong> <a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">Pontefract</a> · <a href="#2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race">Uttoxeter</a></div>
+<div class="fallback-row"><strong>Confidence:</strong> <a href="#2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race">9+/10 (3)</a> · <a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">8+/10 (5)</a> · <a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">7+/10 (13)</a> · <a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">6+/10 (14)</a> · <a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">5+/10 (15)</a></div>
+<details><summary>V11 Top1 races (8)</summary>
+<ul>
+<li><a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">Pontefract · 2:30 Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race)</a></li>
+<li><a href="#2026-07-26-pontefract-3-00-byd-wakefield-british-ebf-stallion-studs-maiden-stakes-gbb-race">Pontefract · 3:00 BYD Wakefield British EBF Stallion Studs Maiden Stakes (GBB Race)</a></li>
+<li><a href="#2026-07-26-pontefract-3-30-trevor-woods-memorial-handicap">Pontefract · 3:30 Trevor Woods Memorial Handicap</a></li>
+<li><a href="#2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race">Uttoxeter · 2:12 QuinnBet Daily Free Bet Juvenile Hurdle (GBB Race)</a></li>
+<li><a href="#2026-07-26-uttoxeter-2-42-roys-ices-mares-handicap-hurdle">Uttoxeter · 2:42 Roys Ices Mares&#x27; Handicap Hurdle</a></li>
+<li><a href="#2026-07-26-uttoxeter-3-42-sheila-and-wayne-golden-wedding-anniversary-handicap-chase-gbb-race">Uttoxeter · 3:42 Sheila And Wayne Golden Wedding Anniversary Handicap Chase (GBB Race)</a></li>
+<li><a href="#2026-07-26-uttoxeter-5-12-quinnbet-handicap-hurdle-div-i">Uttoxeter · 5:12 QuinnBet Handicap Hurdle (Div I)</a></li>
+<li><a href="#2026-07-26-uttoxeter-5-42-quinnbet-handicap-hurdle-div-ii">Uttoxeter · 5:42 QuinnBet Handicap Hurdle (Div II)</a></li>
+</ul></details>
+<details><summary>V12 Top1 races (12)</summary>
+<ul>
+<li><a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">Pontefract · 2:30 Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race)</a></li>
+<li><a href="#2026-07-26-pontefract-3-00-byd-wakefield-british-ebf-stallion-studs-maiden-stakes-gbb-race">Pontefract · 3:00 BYD Wakefield British EBF Stallion Studs Maiden Stakes (GBB Race)</a></li>
+<li><a href="#2026-07-26-pontefract-4-00-william-hill-pomfret-stakes-listed-race">Pontefract · 4:00 William Hill Pomfret Stakes (Listed Race)</a></li>
+<li><a href="#2026-07-26-pontefract-4-30-pontefract-and-district-golf-club-ltd-handicap-gbbplus-race">Pontefract · 4:30 Pontefract And District Golf Club Ltd Handicap (GBBPlus Race)</a></li>
+<li><a href="#2026-07-26-pontefract-5-00-roy-winstanley-memorial-raising-encephalitis-awareness-handicap">Pontefract · 5:00 Roy Winstanley Memorial Raising Encephalitis Awareness Handicap</a></li>
+<li><a href="#2026-07-26-pontefract-5-30-sarah-gusterson-memorial-handicap">Pontefract · 5:30 Sarah Gusterson Memorial Handicap</a></li>
+<li><a href="#2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race">Uttoxeter · 2:12 QuinnBet Daily Free Bet Juvenile Hurdle (GBB Race)</a></li>
+<li><a href="#2026-07-26-uttoxeter-3-12-cl-cleaning-services-ken-boulton-memorial-handicap-hurdle">Uttoxeter · 3:12 CL Cleaning Services Ken Boulton Memorial Handicap Hurdle</a></li>
+<li><a href="#2026-07-26-uttoxeter-3-42-sheila-and-wayne-golden-wedding-anniversary-handicap-chase-gbb-race">Uttoxeter · 3:42 Sheila And Wayne Golden Wedding Anniversary Handicap Chase (GBB Race)</a></li>
+<li><a href="#2026-07-26-uttoxeter-4-12-gary-and-mavis-bird-family-raceday-handicap-hurdle-gbb-race">Uttoxeter · 4:12 Gary And Mavis Bird Family Raceday Handicap Hurdle (GBB Race)</a></li>
+<li><a href="#2026-07-26-uttoxeter-4-42-sun-racing-summer-jumps-championship-handicap-chase-arc-summer-chase-series-qualifier-gbb-race">Uttoxeter · 4:42 Sun Racing Summer Jumps Championship Handicap Chase (Arc Summer Chase Series Qualifier) (GBB Race)</a></li>
+<li><a href="#2026-07-26-uttoxeter-5-42-quinnbet-handicap-hurdle-div-ii">Uttoxeter · 5:42 QuinnBet Handicap Hurdle (Div II)</a></li>
+</ul></details>
+<details><summary>V17 Top1 races (2)</summary>
+<ul>
+<li><a href="#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">Pontefract · 2:30 Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race)</a></li>
+<li><a href="#2026-07-26-pontefract-4-30-pontefract-and-district-golf-club-ltd-handicap-gbbplus-race">Pontefract · 4:30 Pontefract And District Golf Club Ltd Handicap (GBBPlus Race)</a></li>
+</ul></details>
+</section>
+<h2 class="course-title" data-course-title="Pontefract">Pontefract</h2>
+<section class="race" id="2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race" data-course="Pontefract" data-off="2:30" data-race-name="Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race)" data-confidence="8" data-cons-v11="1" data-cons-v12="1" data-cons-v17="1">
+<div class="race-page">
+<div class="race-title">2:30 Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race)</div>
+<div class="meta-line">Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race) · 2026-07-26 · Pontefract · 2:30 · 1m6y · Flat · Class Class 4 · Unknown · Turf · Good To Firm · Field 3 · <strong class="confidence-pill">Confidence 8/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">asset</td>
+<td>3 F</td>
+<td>77</td>
+<td>128</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 79%; background: hsl(111, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 75%; background: hsl(120, 70%, 45%);"></span></div></td>
+<td>1.44</td>
+<td>12</td>
+<td>Fresh</td>
+<td class="col-conn">Sir Mark Prescott Bt · Luke Morris</td>
+<td>T@C — · J@C 33% (3)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">feliz navidad</td>
+<td>3 G</td>
+<td>—</td>
+<td>133</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 32%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(35, 70%, 45%);"></span></div></td>
+<td>6.18</td>
+<td>6</td>
+<td>Fresh</td>
+<td class="col-conn">David Omeara · David Nolan</td>
+<td>T@C — · J@C 21% (14)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">albemagic</td>
+<td>3 G</td>
+<td>—</td>
+<td>133</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 19%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td>7.01</td>
+<td>28</td>
+<td>Fresh</td>
+<td class="col-conn">Steph Hollinshead · Clifford Lee</td>
+<td>T@C — · J@C 0% (2)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-pontefract-3-00-byd-wakefield-british-ebf-stallion-studs-maiden-stakes-gbb-race" data-course="Pontefract" data-off="3:00" data-race-name="BYD Wakefield British EBF Stallion Studs Maiden Stakes (GBB Race)" data-confidence="6" data-cons-v11="1" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">3:00 BYD Wakefield British EBF Stallion Studs Maiden Stakes (GBB Race)</div>
+<div class="meta-line">BYD Wakefield British EBF Stallion Studs Maiden Stakes (GBB Race) · 2026-07-26 · Pontefract · 3:00 · 5f3y · Flat · Class Class 4 · Unknown · Turf · Good To Firm · Field 6 · <strong class="confidence-pill">Confidence 6/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-3-00-byd-wakefield-british-ebf-stallion-studs-maiden-stakes-gbb-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">calef</td>
+<td>2 F</td>
+<td>67</td>
+<td>128</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 45%; background: hsl(64, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 32%; background: hsl(50, 70%, 45%);"></span></div></td>
+<td>5.70</td>
+<td>14</td>
+<td>Fresh</td>
+<td class="col-conn">David Omeara · Mark Winn</td>
+<td>T@C — · J@C 0% (6)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">naval cop</td>
+<td>2 F</td>
+<td>—</td>
+<td>128</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 43%; background: hsl(60, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(35, 70%, 45%);"></span></div></td>
+<td>8.20</td>
+<td>15</td>
+<td>Fresh</td>
+<td class="col-conn">Andrew Balding · P J Mcdonald</td>
+<td>T@C 0% (1) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">bolt of blue</td>
+<td>2 C</td>
+<td>—</td>
+<td>133</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(46, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(52, 70%, 45%);"></span></div></td>
+<td>5.56</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Ed Dunlop · Billy Loughnane</td>
+<td>T@C 0% (1) · J@C —</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">shaqra queen</td>
+<td>2 F</td>
+<td>—</td>
+<td>128</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(38, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(52, 70%, 45%);"></span></div></td>
+<td>5.54</td>
+<td>—</td>
+<td>—</td>
+<td class="col-conn">K R Burke · Clifford Lee</td>
+<td>T@C 22% (9) · J@C 0% (2)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">the mean fiddler</td>
+<td>2 C</td>
+<td>—</td>
+<td>133</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(38, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(52, 70%, 45%);"></span></div></td>
+<td>5.52</td>
+<td>—</td>
+<td>—</td>
+<td class="col-conn">John &amp; Sean Quinn · Jason Hart</td>
+<td>T@C 33% (9) · J@C 25% (32)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">sole ruler</td>
+<td>2 C</td>
+<td>—</td>
+<td>133</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 23%; background: hsl(32, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(28, 70%, 45%);"></span></div></td>
+<td>10.31</td>
+<td>34</td>
+<td>Recent</td>
+<td class="col-conn">Paul Midgley · Unknown</td>
+<td>T@C 11% (18) · J@C —</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">onslaught</td>
+<td>2 C</td>
+<td>—</td>
+<td>133</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>6/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 12%; background: hsl(18, 70%, 45%);"></span></div></td>
+<td>15.50</td>
+<td>14</td>
+<td>Fresh</td>
+<td class="col-conn">Richard &amp; Peter Fahey · Billy Garritty</td>
+<td>T@C 14% (21) · J@C 15% (13)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-pontefract-3-30-trevor-woods-memorial-handicap" data-course="Pontefract" data-off="3:30" data-race-name="Trevor Woods Memorial Handicap" data-confidence="7" data-cons-v11="1" data-cons-v12="0" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">3:30 Trevor Woods Memorial Handicap</div>
+<div class="meta-line">Trevor Woods Memorial Handicap · 2026-07-26 · Pontefract · 3:30 · 1m6y · Flat · Class Class 5 · Unknown · Turf · Good To Firm · Field 7 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-3-30-trevor-woods-memorial-handicap">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">stella lucente</td>
+<td>3 F</td>
+<td>72</td>
+<td>136</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 54%; background: hsl(75, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 59%; background: hsl(94, 70%, 45%);"></span></div></td>
+<td>3.95</td>
+<td>8</td>
+<td>Fresh</td>
+<td class="col-conn">Jack Morland · Callum Rodriguez</td>
+<td>T@C 0% (3) · J@C 30% (10)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">master of entropy</td>
+<td>3 G</td>
+<td>69</td>
+<td>133</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 52%; background: hsl(73, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 30%; background: hsl(47, 70%, 45%);"></span></div></td>
+<td>7.80</td>
+<td>17</td>
+<td>Fresh</td>
+<td class="col-conn">John &amp; Sean Quinn · Jason Hart</td>
+<td>T@C 33% (9) · J@C 25% (32)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">polygram</td>
+<td>4 F</td>
+<td>68</td>
+<td>140</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 50%; background: hsl(69, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(62, 70%, 45%);"></span></div></td>
+<td>5.96</td>
+<td>12</td>
+<td>Fresh</td>
+<td class="col-conn">Tristan Davidson · Rowan Scott</td>
+<td>T@C 0% (2) · J@C 25% (8)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">coolree</td>
+<td>7 G</td>
+<td>69</td>
+<td>141</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(55, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(53, 70%, 45%);"></span></div></td>
+<td>6.96</td>
+<td>5</td>
+<td>Fresh</td>
+<td class="col-conn">Sam England · P J Mcdonald</td>
+<td>T@C 20% (5) · J@C —</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">bradbury</td>
+<td>3 G</td>
+<td>62</td>
+<td>126</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 38%; background: hsl(53, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 41%; background: hsl(64, 70%, 45%);"></span></div></td>
+<td>5.76</td>
+<td>11</td>
+<td>Fresh</td>
+<td class="col-conn">Edward Bethell · Billy Loughnane</td>
+<td>T@C 36% (11) · J@C —</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">the new bay pearl</td>
+<td>4 F</td>
+<td>55</td>
+<td>127</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 17%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td>13.80</td>
+<td>8</td>
+<td>Fresh</td>
+<td class="col-conn">Simon Whitaker · Tom Eaves</td>
+<td>T@C 0% (3) · J@C 0% (7)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">mount king</td>
+<td>6 G</td>
+<td>65</td>
+<td>137</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>16.38</td>
+<td>8</td>
+<td>Fresh</td>
+<td class="col-conn">Tim Easterby · David Allan</td>
+<td>T@C 8% (38) · J@C 12% (32)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-pontefract-4-00-william-hill-pomfret-stakes-listed-race" data-course="Pontefract" data-off="4:00" data-race-name="William Hill Pomfret Stakes (Listed Race)" data-confidence="7" data-cons-v11="0" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">4:00 William Hill Pomfret Stakes (Listed Race)</div>
+<div class="meta-line">William Hill Pomfret Stakes (Listed Race) · 2026-07-26 · Pontefract · 4:00 · 1m6y · Flat · Class Class 1 · Unknown · Turf · Good To Firm · Field 6 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-4-00-william-hill-pomfret-stakes-listed-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">cerulean bay</td>
+<td>5 G</td>
+<td>105</td>
+<td>133</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 51%; background: hsl(71, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 38%; background: hsl(60, 70%, 45%);"></span></div></td>
+<td>4.01</td>
+<td>14</td>
+<td>Fresh</td>
+<td class="col-conn">David Omeara · David Nolan</td>
+<td>T@C — · J@C 21% (14)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">holloway boy</td>
+<td>6 G</td>
+<td>114</td>
+<td>133</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 50%; background: hsl(70, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 44%; background: hsl(70, 70%, 45%);"></span></div></td>
+<td>3.43</td>
+<td>14</td>
+<td>Fresh</td>
+<td class="col-conn">K R Burke · Clifford Lee</td>
+<td>T@C 22% (9) · J@C 0% (2)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">point lynas</td>
+<td>7 G</td>
+<td>108</td>
+<td>133</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(51, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(35, 70%, 45%);"></span></div></td>
+<td>6.87</td>
+<td>72</td>
+<td>Recent</td>
+<td class="col-conn">Edward Bethell · Callum Rodriguez</td>
+<td>T@C 36% (11) · J@C 30% (10)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">model yuko</td>
+<td>4 F</td>
+<td>86</td>
+<td>128</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(32, 70%, 45%);"></span></div></td>
+<td>7.35</td>
+<td>28</td>
+<td>Fresh</td>
+<td class="col-conn">Roger Varian · Ray Dawson</td>
+<td>T@C 0% (4) · J@C 0% (3)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">mostar dreams</td>
+<td>5 M</td>
+<td>88</td>
+<td>128</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 19%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 15%; background: hsl(23, 70%, 45%);"></span></div></td>
+<td>10.29</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Adrian Paul Keatley · Oisin Mcsweeney</td>
+<td>T@C 57% (7) · J@C —</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">crystal flyer</td>
+<td>5 M</td>
+<td>92</td>
+<td>128</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(19, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 12%; background: hsl(19, 70%, 45%);"></span></div></td>
+<td>12.52</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Ben Haslam · Andrew Mullen</td>
+<td>T@C 20% (10) · J@C 20% (10)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-pontefract-4-30-pontefract-and-district-golf-club-ltd-handicap-gbbplus-race" data-course="Pontefract" data-off="4:30" data-race-name="Pontefract And District Golf Club Ltd Handicap (GBBPlus Race)" data-confidence="7" data-cons-v11="0" data-cons-v12="1" data-cons-v17="1">
+<div class="race-page">
+<div class="race-title">4:30 Pontefract And District Golf Club Ltd Handicap (GBBPlus Race)</div>
+<div class="meta-line">Pontefract And District Golf Club Ltd Handicap (GBBPlus Race) · 2026-07-26 · Pontefract · 4:30 · 1m2f5y · Flat · Class Class 3 · Unknown · Turf · Good To Firm · Field 5 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-4-30-pontefract-and-district-golf-club-ltd-handicap-gbbplus-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">jez bomb</td>
+<td>5 G</td>
+<td>76</td>
+<td>132</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 42%; background: hsl(58, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(54, 70%, 45%);"></span></div></td>
+<td>3.45</td>
+<td>8</td>
+<td>Fresh</td>
+<td class="col-conn">Sam England · Rowan Scott</td>
+<td>T@C 20% (5) · J@C 25% (8)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">pomme pomme</td>
+<td>4 F</td>
+<td>79</td>
+<td>135</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(41, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(42, 70%, 45%);"></span></div></td>
+<td>4.44</td>
+<td>12</td>
+<td>Fresh</td>
+<td class="col-conn">Jack Channon · Rose Dawes(5)</td>
+<td>T@C 100% (1) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">percys daydream</td>
+<td>4 F</td>
+<td>84</td>
+<td>140</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(40, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(38, 70%, 45%);"></span></div></td>
+<td>4.82</td>
+<td>8</td>
+<td>Fresh</td>
+<td class="col-conn">David Omeara · Mark Winn</td>
+<td>T@C — · J@C 0% (6)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">moonjid</td>
+<td>4 G</td>
+<td>74</td>
+<td>130</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(29, 70%, 45%);"></span></div></td>
+<td>6.36</td>
+<td>26</td>
+<td>Fresh</td>
+<td class="col-conn">Michael Appleby · Silvestre De Sousa</td>
+<td>T@C 25% (4) · J@C 20% (5)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">without compromise</td>
+<td>5 G</td>
+<td>80</td>
+<td>136</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>8.35</td>
+<td>127</td>
+<td>Returning</td>
+<td class="col-conn">Antony Brittain · Cam Hardie</td>
+<td>T@C 0% (4) · J@C 21% (19)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-pontefract-5-00-roy-winstanley-memorial-raising-encephalitis-awareness-handicap" data-course="Pontefract" data-off="5:00" data-race-name="Roy Winstanley Memorial Raising Encephalitis Awareness Handicap" data-confidence="7" data-cons-v11="0" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">5:00 Roy Winstanley Memorial Raising Encephalitis Awareness Handicap</div>
+<div class="meta-line">Roy Winstanley Memorial Raising Encephalitis Awareness Handicap · 2026-07-26 · Pontefract · 5:00 · 6f · Flat · Class Class 6 · Unknown · Turf · Good To Firm · Field 11 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-5-00-roy-winstanley-memorial-raising-encephalitis-awareness-handicap">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">battenburg belle</td>
+<td>3 F</td>
+<td>51</td>
+<td>130</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(54, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(57, 70%, 45%);"></span></div></td>
+<td>6.06</td>
+<td>21</td>
+<td>Fresh</td>
+<td class="col-conn">Rebecca Menzies · Jason Hart</td>
+<td>T@C 0% (7) · J@C 25% (32)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">bullington bry</td>
+<td>4 G</td>
+<td>50</td>
+<td>134</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 25%; background: hsl(39, 70%, 45%);"></span></div></td>
+<td>8.68</td>
+<td>11</td>
+<td>Fresh</td>
+<td class="col-conn">Jessica Macey · Lewis Edmunds</td>
+<td>T@C 0% (3) · J@C 0% (3)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">miss magic dragon</td>
+<td>3 F</td>
+<td>52</td>
+<td>131</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(43, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td>10.17</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">D Donovan · Clifford Lee</td>
+<td>T@C 0% (1) · J@C 0% (2)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">power of chora</td>
+<td>3 F</td>
+<td>49</td>
+<td>128</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 30%; background: hsl(42, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 17%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td>12.63</td>
+<td>11</td>
+<td>Fresh</td>
+<td class="col-conn">Joey Ramsden · Taryn Langley(5)</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">rain cap</td>
+<td>9 G</td>
+<td>50</td>
+<td>134</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(41, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(45, 70%, 45%);"></span></div></td>
+<td>7.59</td>
+<td>9</td>
+<td>Fresh</td>
+<td class="col-conn">John David Riches · Sean Kirrane</td>
+<td>T@C — · J@C 0% (5)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">summer rain</td>
+<td>4 G</td>
+<td>45</td>
+<td>129</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 17%; background: hsl(26, 70%, 45%);"></span></div></td>
+<td>12.87</td>
+<td>11</td>
+<td>Fresh</td>
+<td class="col-conn">Craig Lidster · David Allan</td>
+<td>T@C 11% (9) · J@C 12% (32)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">go victor</td>
+<td>3 G</td>
+<td>55</td>
+<td>134</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 16%; background: hsl(26, 70%, 45%);"></span></div></td>
+<td>13.20</td>
+<td>22</td>
+<td>Fresh</td>
+<td class="col-conn">Tony Culhane &amp; Stella Barclay · Paul Mulrennan</td>
+<td>T@C 0% (1) · J@C 8% (12)</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">coiled</td>
+<td>4 G</td>
+<td>45</td>
+<td>129</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(28, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>15.73</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Mark Rimell · Silvestre De Sousa</td>
+<td>T@C — · J@C 20% (5)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">my boy jack</td>
+<td>7 G</td>
+<td>45</td>
+<td>129</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(28, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 16%; background: hsl(25, 70%, 45%);"></span></div></td>
+<td>13.60</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Kevin &amp; Lauren Frost · Mason Paetel(5)</td>
+<td>T@C 0% (1) · J@C —</td>
+</tr>
+<tr class="">
+<td>10</td>
+<td class="col-horse">starsong</td>
+<td>7 M</td>
+<td>51</td>
+<td>135</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 19%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>15.09</td>
+<td>7</td>
+<td>Fresh</td>
+<td class="col-conn">Michael Appleby · Ray Dawson</td>
+<td>T@C 25% (4) · J@C 0% (3)</td>
+</tr>
+<tr class="">
+<td>11</td>
+<td class="col-horse">eldeyaar</td>
+<td>7 G</td>
+<td>49</td>
+<td>133</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(26, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 12%; background: hsl(18, 70%, 45%);"></span></div></td>
+<td>18.68</td>
+<td>51</td>
+<td>Recent</td>
+<td class="col-conn">Antony Brittain · Cam Hardie</td>
+<td>T@C 0% (4) · J@C 21% (19)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-pontefract-5-30-sarah-gusterson-memorial-handicap" data-course="Pontefract" data-off="5:30" data-race-name="Sarah Gusterson Memorial Handicap" data-confidence="7" data-cons-v11="0" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">5:30 Sarah Gusterson Memorial Handicap</div>
+<div class="meta-line">Sarah Gusterson Memorial Handicap · 2026-07-26 · Pontefract · 5:30 · 6f · Flat · Class Class 4 · Unknown · Turf · Good To Firm · Field 5 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-pontefract-5-30-sarah-gusterson-memorial-handicap">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">the good biscuit</td>
+<td>5 G</td>
+<td>78</td>
+<td>133</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 44%; background: hsl(61, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 35%; background: hsl(55, 70%, 45%);"></span></div></td>
+<td>4.20</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Ruth Carr · Jason Hart</td>
+<td>T@C 14% (21) · J@C 25% (32)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">bell shot</td>
+<td>7 G</td>
+<td>81</td>
+<td>136</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 35%; background: hsl(49, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(41, 70%, 45%);"></span></div></td>
+<td>5.74</td>
+<td>7</td>
+<td>Fresh</td>
+<td class="col-conn">Michael Appleby · Mason Paetel(5)</td>
+<td>T@C 25% (4) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">trilby</td>
+<td>6 G</td>
+<td>85</td>
+<td>140</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 35%; background: hsl(49, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 41%; background: hsl(65, 70%, 45%);"></span></div></td>
+<td>3.61</td>
+<td>0</td>
+<td>Fresh</td>
+<td class="col-conn">Sam England · P J Mcdonald</td>
+<td>T@C 20% (5) · J@C —</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">goyard</td>
+<td>4 G</td>
+<td>81</td>
+<td>136</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 35%; background: hsl(48, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(39, 70%, 45%);"></span></div></td>
+<td>6.03</td>
+<td>19</td>
+<td>Fresh</td>
+<td class="col-conn">David Omeara · David Nolan</td>
+<td>T@C — · J@C 21% (14)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">iris dancer</td>
+<td>8 M</td>
+<td>67</td>
+<td>122</td>
+<td>—</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td>6.88</td>
+<td>14</td>
+<td>Fresh</td>
+<td class="col-conn">Tristan Davidson · Rowan Scott</td>
+<td>T@C 0% (2) · J@C 25% (8)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<h2 class="course-title" data-course-title="Uttoxeter">Uttoxeter</h2>
+<section class="race" id="2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race" data-course="Uttoxeter" data-off="2:12" data-race-name="QuinnBet Daily Free Bet Juvenile Hurdle (GBB Race)" data-confidence="10" data-cons-v11="1" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">2:12 QuinnBet Daily Free Bet Juvenile Hurdle (GBB Race)</div>
+<div class="meta-line">QuinnBet Daily Free Bet Juvenile Hurdle (GBB Race) · 2026-07-26 · Uttoxeter · 2:12 · 1m7f168y · Hurdle · Class Class 4 · Unknown · Turf · Good · Field 9 · <strong class="confidence-pill">Confidence 10/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">vietnorm</td>
+<td>3 G</td>
+<td>—</td>
+<td>161</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 71%; background: hsl(99, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 74%; background: hsl(118, 70%, 45%);"></span></div></td>
+<td>3.39</td>
+<td>19</td>
+<td>Fresh</td>
+<td class="col-conn">Adrian Paul Keatley · Danny Mcmenamin</td>
+<td>T@C 33% (3) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">salkadan</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 58%; background: hsl(81, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 49%; background: hsl(78, 70%, 45%);"></span></div></td>
+<td>5.10</td>
+<td>51</td>
+<td>Recent</td>
+<td class="col-conn">Dan Skelton · Harry Skelton</td>
+<td>T@C 36% (44) · J@C 42% (36)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">zooter</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 43%; background: hsl(61, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(57, 70%, 45%);"></span></div></td>
+<td>6.95</td>
+<td>30</td>
+<td>Fresh</td>
+<td class="col-conn">Jack Jones · Sean Bowen</td>
+<td>T@C 50% (2) · J@C 23% (43)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">keep under wraps</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(48, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(47, 70%, 45%);"></span></div></td>
+<td>8.50</td>
+<td>32</td>
+<td>Recent</td>
+<td class="col-conn">Oliver Greenall &amp; Josh Guerriero · Jack Tudor</td>
+<td>T@C 17% (18) · J@C 5% (22)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">us officer</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(38, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(28, 70%, 45%);"></span></div></td>
+<td>14.17</td>
+<td>6</td>
+<td>Fresh</td>
+<td class="col-conn">Tom Dascombe · Brendan Powell</td>
+<td>T@C — · J@C 0% (10)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">al zaama</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(36, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 10%; background: hsl(16, 70%, 45%);"></span></div></td>
+<td>24.70</td>
+<td>86</td>
+<td>Recent</td>
+<td class="col-conn">Donald Mccain · Theo Gillard</td>
+<td>T@C — · J@C 11% (9)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">hello garda</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 13%; background: hsl(20, 70%, 45%);"></span></div></td>
+<td>19.76</td>
+<td>4</td>
+<td>Fresh</td>
+<td class="col-conn">John Joseph Hanlon · Paddy Hanlon(5)</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">nicolai</td>
+<td>3 G</td>
+<td>—</td>
+<td>154</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(29, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>18.23</td>
+<td>107</td>
+<td>Recent</td>
+<td class="col-conn">Neil Mulholland · Conor Ofarrell</td>
+<td>T@C 11% (9) · J@C —</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">adba</td>
+<td>3 F</td>
+<td>—</td>
+<td>147</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>10/10</td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(20, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 8%; background: hsl(12, 70%, 45%);"></span></div></td>
+<td>32.08</td>
+<td>90</td>
+<td>Recent</td>
+<td class="col-conn">Faye Bramley · Harry Kimber</td>
+<td>T@C 30% (10) · J@C 0% (1)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-2-42-roys-ices-mares-handicap-hurdle" data-course="Uttoxeter" data-off="2:42" data-race-name="Roys Ices Mares&#x27; Handicap Hurdle" data-confidence="7" data-cons-v11="1" data-cons-v12="0" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">2:42 Roys Ices Mares&#x27; Handicap Hurdle</div>
+<div class="meta-line">Roys Ices Mares&#x27; Handicap Hurdle · 2026-07-26 · Uttoxeter · 2:42 · 1m7f168y · Hurdle · Class Class 5 · Unknown · Turf · Good · Field 11 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-2-42-roys-ices-mares-handicap-hurdle">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">miracles do happen</td>
+<td>5 M</td>
+<td>95</td>
+<td>165</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 52%; background: hsl(74, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 48%; background: hsl(76, 70%, 45%);"></span></div></td>
+<td>6.14</td>
+<td>36</td>
+<td>Recent</td>
+<td class="col-conn">Billy Aprahamian · James Bowen</td>
+<td>T@C 33% (3) · J@C 7% (15)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">prettylady</td>
+<td>4 F</td>
+<td>91</td>
+<td>157</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 52%; background: hsl(73, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 46%; background: hsl(74, 70%, 45%);"></span></div></td>
+<td>6.29</td>
+<td>29</td>
+<td>Fresh</td>
+<td class="col-conn">Oliver Greenall &amp; Josh Guerriero · Jack Tudor</td>
+<td>T@C 17% (18) · J@C 5% (22)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">lady fortune</td>
+<td>6 M</td>
+<td>83</td>
+<td>153</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(55, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 28%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td>10.59</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Barry Brennan · Isabelle Ryder(5)</td>
+<td>T@C 17% (6) · J@C —</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">jukebox annie</td>
+<td>7 M</td>
+<td>76</td>
+<td>146</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(48, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(42, 70%, 45%);"></span></div></td>
+<td>11.10</td>
+<td>15</td>
+<td>Fresh</td>
+<td class="col-conn">Claire Hitch · Ben Godfrey</td>
+<td>T@C — · J@C 0% (1)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">culligran</td>
+<td>7 M</td>
+<td>87</td>
+<td>157</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(48, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(33, 70%, 45%);"></span></div></td>
+<td>13.96</td>
+<td>24</td>
+<td>Fresh</td>
+<td class="col-conn">D J Jeffreys · Kielan Woods</td>
+<td>T@C 0% (6) · J@C 29% (7)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">northern rose</td>
+<td>6 M</td>
+<td>79</td>
+<td>149</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(47, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(42, 70%, 45%);"></span></div></td>
+<td>11.01</td>
+<td>6</td>
+<td>Fresh</td>
+<td class="col-conn">Gary Hanmer · James Davies</td>
+<td>T@C 7% (14) · J@C 14% (7)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">myfavouritesister</td>
+<td>7 M</td>
+<td>73</td>
+<td>143</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(40, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 17%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td>16.73</td>
+<td>23</td>
+<td>Fresh</td>
+<td class="col-conn">Patrick Neville · Brian Hughes</td>
+<td>T@C — · J@C 0% (3)</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">no risk today</td>
+<td>6 M</td>
+<td>89</td>
+<td>159</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>20.78</td>
+<td>15</td>
+<td>Fresh</td>
+<td class="col-conn">Fergal Obrien · Jack Hogan</td>
+<td>T@C — · J@C 0% (14)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">miss oreo</td>
+<td>8 M</td>
+<td>98</td>
+<td>168</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(36, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 23%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td>12.59</td>
+<td>25</td>
+<td>Fresh</td>
+<td class="col-conn">John Joseph Hanlon · Unknown</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>10</td>
+<td class="col-horse">dotties promise</td>
+<td>6 M</td>
+<td>82</td>
+<td>152</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(36, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 15%; background: hsl(24, 70%, 45%);"></span></div></td>
+<td>19.09</td>
+<td>23</td>
+<td>Fresh</td>
+<td class="col-conn">Susan Corbett · Nathan Moscrop</td>
+<td>T@C — · J@C 0% (5)</td>
+</tr>
+<tr class="">
+<td>11</td>
+<td class="col-horse">granny b</td>
+<td>6 M</td>
+<td>72</td>
+<td>142</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 15%; background: hsl(23, 70%, 45%);"></span></div></td>
+<td>19.97</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Michael Mullineaux · Kevin Brogan</td>
+<td>T@C 0% (2) · J@C 0% (4)</td>
+</tr>
+<tr class="">
+<td>12</td>
+<td class="col-horse">curious mrs fox</td>
+<td>5 M</td>
+<td>83</td>
+<td>153</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 12%; background: hsl(19, 70%, 45%);"></span></div></td>
+<td>24.11</td>
+<td>34</td>
+<td>Recent</td>
+<td class="col-conn">David Thompson · Joshua Thompson(5)</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-3-12-cl-cleaning-services-ken-boulton-memorial-handicap-hurdle" data-course="Uttoxeter" data-off="3:12" data-race-name="CL Cleaning Services Ken Boulton Memorial Handicap Hurdle" data-confidence="8" data-cons-v11="0" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">3:12 CL Cleaning Services Ken Boulton Memorial Handicap Hurdle</div>
+<div class="meta-line">CL Cleaning Services Ken Boulton Memorial Handicap Hurdle · 2026-07-26 · Uttoxeter · 3:12 · 1m7f168y · Hurdle · Class Class 4 · Unknown · Turf · Good · Field 6 · <strong class="confidence-pill">Confidence 8/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-3-12-cl-cleaning-services-ken-boulton-memorial-handicap-hurdle">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">drombeg lad</td>
+<td>6 G</td>
+<td>108</td>
+<td>158</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 53%; background: hsl(75, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 35%; background: hsl(55, 70%, 45%);"></span></div></td>
+<td>6.70</td>
+<td>24</td>
+<td>Fresh</td>
+<td class="col-conn">Alex Hales · Kielan Woods</td>
+<td>T@C 25% (4) · J@C 29% (7)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">ice jet</td>
+<td>4 G</td>
+<td>117</td>
+<td>163</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 48%; background: hsl(67, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 48%; background: hsl(76, 70%, 45%);"></span></div></td>
+<td>4.87</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Dan Skelton · Non-Runner</td>
+<td>T@C 36% (44) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">emerald time</td>
+<td>5 G</td>
+<td>103</td>
+<td>153</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 43%; background: hsl(61, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td>10.64</td>
+<td>22</td>
+<td>Fresh</td>
+<td class="col-conn">Dom Elsworth &amp; Ryan Hatch · Tom Bellamy</td>
+<td>T@C 0% (1) · J@C 0% (6)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">romany brown</td>
+<td>6 G</td>
+<td>110</td>
+<td>160</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 40%; background: hsl(56, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(54, 70%, 45%);"></span></div></td>
+<td>6.80</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Ben Case · Ciaran Gethings</td>
+<td>T@C 0% (2) · J@C 8% (12)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">war correspondent</td>
+<td>7 G</td>
+<td>118</td>
+<td>168</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 38%; background: hsl(53, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(53, 70%, 45%);"></span></div></td>
+<td>6.95</td>
+<td>13</td>
+<td>Fresh</td>
+<td class="col-conn">John Joseph Hanlon · Paddy Hanlon(5)</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">king sacre</td>
+<td>6 G</td>
+<td>108</td>
+<td>158</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(51, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 25%; background: hsl(39, 70%, 45%);"></span></div></td>
+<td>9.44</td>
+<td>48</td>
+<td>Recent</td>
+<td class="col-conn">Nigel Hawke · James Davies</td>
+<td>T@C 0% (4) · J@C 14% (7)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">diesel line</td>
+<td>8 G</td>
+<td>93</td>
+<td>143</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(36, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 15%; background: hsl(24, 70%, 45%);"></span></div></td>
+<td>15.20</td>
+<td>20</td>
+<td>Fresh</td>
+<td class="col-conn">Charles &amp; Adam Pogson · Unknown</td>
+<td>T@C 0% (6) · J@C —</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">bright legend</td>
+<td>6 G</td>
+<td>111</td>
+<td>161</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>—</td>
+<td>8/10</td>
+<td><div class="score-bar"><span style="width: 25%; background: hsl(35, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(32, 70%, 45%);"></span></div></td>
+<td>11.29</td>
+<td>88</td>
+<td>Recent</td>
+<td class="col-conn">Faye Bramley · Jack Oneill(7)</td>
+<td>T@C 30% (10) · J@C —</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-3-42-sheila-and-wayne-golden-wedding-anniversary-handicap-chase-gbb-race" data-course="Uttoxeter" data-off="3:42" data-race-name="Sheila And Wayne Golden Wedding Anniversary Handicap Chase (GBB Race)" data-confidence="7" data-cons-v11="1" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">3:42 Sheila And Wayne Golden Wedding Anniversary Handicap Chase (GBB Race)</div>
+<div class="meta-line">Sheila And Wayne Golden Wedding Anniversary Handicap Chase (GBB Race) · 2026-07-26 · Uttoxeter · 3:42 · 3m10y · Chase · Class Class 2 · Unknown · Turf · Good · Field 8 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-3-42-sheila-and-wayne-golden-wedding-anniversary-handicap-chase-gbb-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">sunray shadow</td>
+<td>7 G</td>
+<td>129</td>
+<td>162</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 64%; background: hsl(89, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 51%; background: hsl(81, 70%, 45%);"></span></div></td>
+<td>5.83</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Dan Skelton · Harry Skelton</td>
+<td>T@C 36% (44) · J@C 42% (36)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">the flying poet</td>
+<td>7 G</td>
+<td>112</td>
+<td>145</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 48%; background: hsl(67, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 48%; background: hsl(76, 70%, 45%);"></span></div></td>
+<td>6.21</td>
+<td>23</td>
+<td>Fresh</td>
+<td class="col-conn">Olly Murphy · Sean Bowen</td>
+<td>T@C 24% (34) · J@C 23% (43)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">grand clermont</td>
+<td>10 G</td>
+<td>130</td>
+<td>163</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 43%; background: hsl(61, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 30%; background: hsl(47, 70%, 45%);"></span></div></td>
+<td>9.99</td>
+<td>13</td>
+<td>Fresh</td>
+<td class="col-conn">David Pipe · Rian Corcoran(5)</td>
+<td>T@C 13% (15) · J@C —</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">sony bill</td>
+<td>5 G</td>
+<td>132</td>
+<td>165</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 41%; background: hsl(57, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(54, 70%, 45%);"></span></div></td>
+<td>8.74</td>
+<td>10</td>
+<td>Fresh</td>
+<td class="col-conn">Faye Bramley · Harry Cobden</td>
+<td>T@C 30% (10) · J@C 21% (14)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">sure touch</td>
+<td>10 G</td>
+<td>135</td>
+<td>168</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 37%; background: hsl(52, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(49, 70%, 45%);"></span></div></td>
+<td>9.65</td>
+<td>38</td>
+<td>Recent</td>
+<td class="col-conn">Olly Murphy · Tom Hutsby(10)</td>
+<td>T@C 24% (34) · J@C —</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">bagheera ginge</td>
+<td>8 G</td>
+<td>127</td>
+<td>160</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 35%; background: hsl(49, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 38%; background: hsl(60, 70%, 45%);"></span></div></td>
+<td>7.90</td>
+<td>26</td>
+<td>Fresh</td>
+<td class="col-conn">Nigel &amp; Willy Twiston-Davies · Non-Runner</td>
+<td>T@C 0% (5) · J@C —</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">hold your fort</td>
+<td>10 G</td>
+<td>126</td>
+<td>159</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(48, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 28%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td>10.75</td>
+<td>15</td>
+<td>Fresh</td>
+<td class="col-conn">Debra Hamer · Tom Bellamy</td>
+<td>T@C 0% (3) · J@C 0% (6)</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">imperial alex</td>
+<td>9 G</td>
+<td>126</td>
+<td>159</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(46, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 19%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td>15.60</td>
+<td>27</td>
+<td>Fresh</td>
+<td class="col-conn">Tom Lacey · Stan Sheppard</td>
+<td>T@C 18% (11) · J@C 17% (12)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">stans the man</td>
+<td>9 G</td>
+<td>120</td>
+<td>153</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td>15.22</td>
+<td>7</td>
+<td>Fresh</td>
+<td class="col-conn">Ella Pickard · Ben Godfrey</td>
+<td>T@C — · J@C 0% (1)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-4-12-gary-and-mavis-bird-family-raceday-handicap-hurdle-gbb-race" data-course="Uttoxeter" data-off="4:12" data-race-name="Gary And Mavis Bird Family Raceday Handicap Hurdle (GBB Race)" data-confidence="5" data-cons-v11="0" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">4:12 Gary And Mavis Bird Family Raceday Handicap Hurdle (GBB Race)</div>
+<div class="meta-line">Gary And Mavis Bird Family Raceday Handicap Hurdle (GBB Race) · 2026-07-26 · Uttoxeter · 4:12 · 2m7f70y · Hurdle · Class Class 2 · Unknown · Turf · Good · Field 9 · <strong class="confidence-pill">Confidence 5/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-4-12-gary-and-mavis-bird-family-raceday-handicap-hurdle-gbb-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">karnaval point</td>
+<td>6 G</td>
+<td>120</td>
+<td>158</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 52%; background: hsl(73, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 42%; background: hsl(67, 70%, 45%);"></span></div></td>
+<td>6.42</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">David Pipe · Rian Corcoran(5)</td>
+<td>T@C 13% (15) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">paddy de pole</td>
+<td>8 G</td>
+<td>117</td>
+<td>155</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 44%; background: hsl(61, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 44%; background: hsl(70, 70%, 45%);"></span></div></td>
+<td>6.18</td>
+<td>38</td>
+<td>Recent</td>
+<td class="col-conn">Paul Nicholls · Freddie Gingell</td>
+<td>T@C 33% (3) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">divilabother</td>
+<td>8 G</td>
+<td>119</td>
+<td>157</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 43%; background: hsl(60, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 28%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td>9.74</td>
+<td>1</td>
+<td>Fresh</td>
+<td class="col-conn">Tristan Davidson · Harry Reed</td>
+<td>T@C 100% (1) · J@C 33% (3)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">tyson</td>
+<td>6 G</td>
+<td>113</td>
+<td>151</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 42%; background: hsl(59, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(49, 70%, 45%);"></span></div></td>
+<td>8.76</td>
+<td>25</td>
+<td>Fresh</td>
+<td class="col-conn">Dan Skelton · Harry Skelton</td>
+<td>T@C 36% (44) · J@C 42% (36)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">shallow river</td>
+<td>10 G</td>
+<td>127</td>
+<td>165</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 40%; background: hsl(57, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(57, 70%, 45%);"></span></div></td>
+<td>7.57</td>
+<td>44</td>
+<td>Recent</td>
+<td class="col-conn">Olly Murphy · Sean Bowen</td>
+<td>T@C 24% (34) · J@C 23% (43)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">idaho fire</td>
+<td>5 G</td>
+<td>110</td>
+<td>148</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(55, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 34%; background: hsl(54, 70%, 45%);"></span></div></td>
+<td>8.02</td>
+<td>15</td>
+<td>Fresh</td>
+<td class="col-conn">James Owen · Jonathan Burke</td>
+<td>T@C 0% (9) · J@C 0% (11)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">pike road</td>
+<td>7 G</td>
+<td>113</td>
+<td>151</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 30%; background: hsl(42, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td>13.88</td>
+<td>24</td>
+<td>Fresh</td>
+<td class="col-conn">Martin Keighley · Freddie Keighley(5)</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">zillow</td>
+<td>6 G</td>
+<td>130</td>
+<td>168</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 19%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td>14.41</td>
+<td>27</td>
+<td>Fresh</td>
+<td class="col-conn">Faye Bramley · Harry Cobden</td>
+<td>T@C 30% (10) · J@C 21% (14)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">roger pol</td>
+<td>8 G</td>
+<td>125</td>
+<td>163</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>5/10</td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(29, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(29, 70%, 45%);"></span></div></td>
+<td>14.87</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Jamie Snowden · Isabelle Ryder(5)</td>
+<td>T@C 17% (12) · J@C —</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-4-42-sun-racing-summer-jumps-championship-handicap-chase-arc-summer-chase-series-qualifier-gbb-race" data-course="Uttoxeter" data-off="4:42" data-race-name="Sun Racing Summer Jumps Championship Handicap Chase (Arc Summer Chase Series Qualifier) (GBB Race)" data-confidence="7" data-cons-v11="0" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">4:42 Sun Racing Summer Jumps Championship Handicap Chase (Arc Summer Chase Series Qualifier) (GBB Race)</div>
+<div class="meta-line">Sun Racing Summer Jumps Championship Handicap Chase (Arc Summer Chase Series Qualifier) (GBB Race) · 2026-07-26 · Uttoxeter · 4:42 · 2m4f · Chase · Class Class 4 · Unknown · Turf · Good · Field 10 · <strong class="confidence-pill">Confidence 7/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-4-42-sun-racing-summer-jumps-championship-handicap-chase-arc-summer-chase-series-qualifier-gbb-race">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">country park</td>
+<td>7 G</td>
+<td>118</td>
+<td>166</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 49%; background: hsl(68, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 30%; background: hsl(48, 70%, 45%);"></span></div></td>
+<td>7.81</td>
+<td>29</td>
+<td>Fresh</td>
+<td class="col-conn">Jonjo &amp; A J Oneill · Jonjo Oneill Jr</td>
+<td>—</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">palamon</td>
+<td>6 G</td>
+<td>121</td>
+<td>169</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 47%; background: hsl(65, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 38%; background: hsl(60, 70%, 45%);"></span></div></td>
+<td>6.28</td>
+<td>91</td>
+<td>Recent</td>
+<td class="col-conn">Dan Skelton · Charlie Todd</td>
+<td>T@C 36% (44) · J@C 22% (9)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">at the oche</td>
+<td>5 G</td>
+<td>108</td>
+<td>156</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 41%; background: hsl(58, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 38%; background: hsl(61, 70%, 45%);"></span></div></td>
+<td>6.17</td>
+<td>124</td>
+<td>Returning</td>
+<td class="col-conn">Dan Skelton · Harry Skelton</td>
+<td>T@C 36% (44) · J@C 42% (36)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">lakefield flyer</td>
+<td>8 G</td>
+<td>110</td>
+<td>158</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(55, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 28%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td>8.51</td>
+<td>20</td>
+<td>Fresh</td>
+<td class="col-conn">John Joseph Hanlon · Paddy Hanlon(5)</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">hudson</td>
+<td>5 G</td>
+<td>105</td>
+<td>153</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td>12.13</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Mickey Bowen · James Bowen</td>
+<td>T@C 21% (14) · J@C 7% (15)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">ras kassar</td>
+<td>7 G</td>
+<td>108</td>
+<td>156</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 29%; background: hsl(41, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td>12.13</td>
+<td>13</td>
+<td>Fresh</td>
+<td class="col-conn">David Pipe · Rian Corcoran(5)</td>
+<td>T@C 13% (15) · J@C —</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">belle le grand</td>
+<td>7 M</td>
+<td>109</td>
+<td>157</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(36, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 17%; background: hsl(26, 70%, 45%);"></span></div></td>
+<td>14.26</td>
+<td>44</td>
+<td>Recent</td>
+<td class="col-conn">Dan Skelton · Tristan Durrell</td>
+<td>T@C 36% (44) · J@C 14% (7)</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">buddah castle</td>
+<td>6 G</td>
+<td>108</td>
+<td>156</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(29, 70%, 45%);"></span></div></td>
+<td>12.83</td>
+<td>7</td>
+<td>Fresh</td>
+<td class="col-conn">Patrick Neville · Brian Hughes</td>
+<td>T@C — · J@C 0% (3)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">gateau de miel</td>
+<td>10 G</td>
+<td>112</td>
+<td>160</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(33, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 17%; background: hsl(26, 70%, 45%);"></span></div></td>
+<td>14.07</td>
+<td>20</td>
+<td>Fresh</td>
+<td class="col-conn">Fergal Obrien · Tom Broughton(3)</td>
+<td>—</td>
+</tr>
+<tr class="">
+<td>10</td>
+<td class="col-horse">a dublin job</td>
+<td>9 G</td>
+<td>102</td>
+<td>150</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>7/10</td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 12%; background: hsl(18, 70%, 45%);"></span></div></td>
+<td>20.35</td>
+<td>18</td>
+<td>Fresh</td>
+<td class="col-conn">Sarah-Jayne Davies · Cameron Johnstone-Baker(7)</td>
+<td>T@C 10% (10) · J@C —</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-5-12-quinnbet-handicap-hurdle-div-i" data-course="Uttoxeter" data-off="5:12" data-race-name="QuinnBet Handicap Hurdle (Div I)" data-confidence="9" data-cons-v11="1" data-cons-v12="0" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">5:12 QuinnBet Handicap Hurdle (Div I)</div>
+<div class="meta-line">QuinnBet Handicap Hurdle (Div I) · 2026-07-26 · Uttoxeter · 5:12 · 2m3f207y · Hurdle · Class Class 5 · Unknown · Turf · Good · Field 10 · <strong class="confidence-pill">Confidence 9/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-5-12-quinnbet-handicap-hurdle-div-i">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">jafimgoso</td>
+<td>7 G</td>
+<td>101</td>
+<td>164</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 51%; background: hsl(72, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 40%; background: hsl(63, 70%, 45%);"></span></div></td>
+<td>5.67</td>
+<td>32</td>
+<td>Recent</td>
+<td class="col-conn">Dan Skelton · Harry Skelton</td>
+<td>T@C 36% (44) · J@C 42% (36)</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">purple owl</td>
+<td>6 G</td>
+<td>105</td>
+<td>168</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 48%; background: hsl(68, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 28%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td>8.16</td>
+<td>24</td>
+<td>Fresh</td>
+<td class="col-conn">David Pipe · Jack Tudor</td>
+<td>T@C 13% (15) · J@C 5% (22)</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">royal rocket</td>
+<td>5 G</td>
+<td>103</td>
+<td>166</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 47%; background: hsl(66, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(49, 70%, 45%);"></span></div></td>
+<td>7.26</td>
+<td>36</td>
+<td>Recent</td>
+<td class="col-conn">Emma Lavelle · Harry Cobden</td>
+<td>T@C 22% (9) · J@C 21% (14)</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">iamyouare</td>
+<td>6 M</td>
+<td>105</td>
+<td>168</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 42%; background: hsl(59, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(50, 70%, 45%);"></span></div></td>
+<td>7.19</td>
+<td>24</td>
+<td>Fresh</td>
+<td class="col-conn">Donald Mccain · Theo Gillard</td>
+<td>T@C — · J@C 11% (9)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">pure logic</td>
+<td>6 M</td>
+<td>99</td>
+<td>162</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 18%; background: hsl(28, 70%, 45%);"></span></div></td>
+<td>12.85</td>
+<td>13</td>
+<td>Fresh</td>
+<td class="col-conn">John Joseph Hanlon · Paddy Hanlon(5)</td>
+<td>T@C 0% (2) · J@C —</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">crafty gael</td>
+<td>7 G</td>
+<td>91</td>
+<td>154</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 30%; background: hsl(41, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(32, 70%, 45%);"></span></div></td>
+<td>10.95</td>
+<td>92</td>
+<td>Recent</td>
+<td class="col-conn">Olly Murphy · Sean Bowen</td>
+<td>T@C 24% (34) · J@C 23% (43)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">illico de montave</td>
+<td>8 G</td>
+<td>79</td>
+<td>142</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 24%; background: hsl(33, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td>10.44</td>
+<td>329</td>
+<td>Long layoff</td>
+<td class="col-conn">Rosemary Gasson · Ben Poste</td>
+<td>T@C 0% (3) · J@C 0% (10)</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">beny nahar road</td>
+<td>7 G</td>
+<td>98</td>
+<td>161</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 21%; background: hsl(30, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(22, 70%, 45%);"></span></div></td>
+<td>16.01</td>
+<td>20</td>
+<td>Fresh</td>
+<td class="col-conn">Henry Hogarth · Jamie Hamilton</td>
+<td>T@C — · J@C 0% (6)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">warners cross</td>
+<td>9 G</td>
+<td>79</td>
+<td>142</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 13%; background: hsl(20, 70%, 45%);"></span></div></td>
+<td>17.93</td>
+<td>75</td>
+<td>Recent</td>
+<td class="col-conn">Sophie Leech · Harry Reed</td>
+<td>T@C 0% (1) · J@C 33% (3)</td>
+</tr>
+<tr class="">
+<td>10</td>
+<td class="col-horse">luminaries</td>
+<td>9 G</td>
+<td>79</td>
+<td>142</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 14%; background: hsl(19, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 9%; background: hsl(14, 70%, 45%);"></span></div></td>
+<td>24.38</td>
+<td>34</td>
+<td>Recent</td>
+<td class="col-conn">Ewan Whillans · Sean Quinlan</td>
+<td>T@C — · J@C 0% (4)</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+<section class="race" id="2026-07-26-uttoxeter-5-42-quinnbet-handicap-hurdle-div-ii" data-course="Uttoxeter" data-off="5:42" data-race-name="QuinnBet Handicap Hurdle (Div II)" data-confidence="9" data-cons-v11="1" data-cons-v12="1" data-cons-v17="0">
+<div class="race-page">
+<div class="race-title">5:42 QuinnBet Handicap Hurdle (Div II)</div>
+<div class="meta-line">QuinnBet Handicap Hurdle (Div II) · 2026-07-26 · Uttoxeter · 5:42 · 2m3f207y · Hurdle · Class Class 5 · Unknown · Turf · Good · Field 8 · <strong class="confidence-pill">Confidence 9/10</strong></div>
+<div class="race-links"><a class="race-link-chip" href="2026-07-26_runner_metric_companion.html#2026-07-26-uttoxeter-5-42-quinnbet-handicap-hurdle-div-ii">Open companion report</a></div>
+<div class="section-title">Runners</div>
+<div class="table-wrap">
+<table class="field-table">
+<thead><tr>
+<th>Rank</th>
+<th>Horse</th>
+<th>Age/Sex</th>
+<th>OR</th>
+<th>Wt(lbs)</th>
+<th>V11</th>
+<th>V12</th>
+<th>V17</th>
+<th>Confidence</th>
+<th>Place</th>
+<th>Win</th>
+<th>Fair(Win)</th>
+<th>DSR</th>
+<th>Fitness</th>
+<th>Connections (T/J)</th>
+<th>Track SR (T/J)</th>
+</tr></thead>
+<tbody>
+<tr class="rank-top">
+<td>1</td>
+<td class="col-horse">fiskardo</td>
+<td>6 G</td>
+<td>104</td>
+<td>167</td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td class="dot-cell"><span class="dot gold" title="Top 1" aria-label="Top 1">1</span></td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 61%; background: hsl(86, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 59%; background: hsl(95, 70%, 45%);"></span></div></td>
+<td>3.89</td>
+<td>44</td>
+<td>Recent</td>
+<td class="col-conn">Mickey Bowen · Shane Fenelon(5)</td>
+<td>T@C 21% (14) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>2</td>
+<td class="col-horse">october hill</td>
+<td>6 M</td>
+<td>103</td>
+<td>166</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 42%; background: hsl(59, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 28%; background: hsl(44, 70%, 45%);"></span></div></td>
+<td>8.29</td>
+<td>44</td>
+<td>Recent</td>
+<td class="col-conn">David Pipe · Rian Corcoran(5)</td>
+<td>T@C 13% (15) · J@C —</td>
+</tr>
+<tr class="rank-top">
+<td>3</td>
+<td class="col-horse">ashdown forest</td>
+<td>4 G</td>
+<td>96</td>
+<td>154</td>
+<td>—</td>
+<td class="dot-cell"><span class="dot bronze" title="Top 3" aria-label="Top 3">3</span></td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 39%; background: hsl(54, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 22%; background: hsl(34, 70%, 45%);"></span></div></td>
+<td>10.71</td>
+<td>1</td>
+<td>Fresh</td>
+<td class="col-conn">Dan Skelton · Non-Runner</td>
+<td>T@C 36% (44) · J@C —</td>
+</tr>
+<tr class="">
+<td>4</td>
+<td class="col-horse">uhtred ragnarson</td>
+<td>5 G</td>
+<td>105</td>
+<td>168</td>
+<td class="dot-cell"><span class="dot silver" title="Top 2" aria-label="Top 2">2</span></td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 37%; background: hsl(51, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 33%; background: hsl(53, 70%, 45%);"></span></div></td>
+<td>6.95</td>
+<td>26</td>
+<td>Fresh</td>
+<td class="col-conn">Alan King · Tom Bellamy</td>
+<td>T@C 0% (7) · J@C 0% (6)</td>
+</tr>
+<tr class="">
+<td>5</td>
+<td class="col-horse">tommy cullen</td>
+<td>8 G</td>
+<td>102</td>
+<td>165</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(51, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 27%; background: hsl(43, 70%, 45%);"></span></div></td>
+<td>8.55</td>
+<td>24</td>
+<td>Fresh</td>
+<td class="col-conn">Matt Crawley · Jack Quinlan</td>
+<td>T@C — · J@C 0% (6)</td>
+</tr>
+<tr class="">
+<td>6</td>
+<td class="col-horse">sonyourastar</td>
+<td>6 G</td>
+<td>99</td>
+<td>162</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 36%; background: hsl(50, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(31, 70%, 45%);"></span></div></td>
+<td>11.59</td>
+<td>23</td>
+<td>Fresh</td>
+<td class="col-conn">Olly Murphy · Sean Bowen</td>
+<td>T@C 24% (34) · J@C 23% (43)</td>
+</tr>
+<tr class="">
+<td>7</td>
+<td class="col-horse">the secret pearl</td>
+<td>7 M</td>
+<td>98</td>
+<td>161</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 31%; background: hsl(43, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 15%; background: hsl(24, 70%, 45%);"></span></div></td>
+<td>14.93</td>
+<td>36</td>
+<td>Recent</td>
+<td class="col-conn">Alex Hales · Kielan Woods</td>
+<td>T@C 25% (4) · J@C 29% (7)</td>
+</tr>
+<tr class="">
+<td>8</td>
+<td class="col-horse">mcflo</td>
+<td>5 M</td>
+<td>79</td>
+<td>142</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 26%; background: hsl(37, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 16%; background: hsl(25, 70%, 45%);"></span></div></td>
+<td>14.75</td>
+<td>26</td>
+<td>Fresh</td>
+<td class="col-conn">Anthony Carson · Brendan Powell</td>
+<td>T@C — · J@C 0% (10)</td>
+</tr>
+<tr class="">
+<td>9</td>
+<td class="col-horse">papillondelumiere</td>
+<td>8 G</td>
+<td>79</td>
+<td>142</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>9/10</td>
+<td><div class="score-bar"><span style="width: 20%; background: hsl(27, 70%, 45%);"></span></div></td>
+<td><div class="score-bar"><span style="width: 11%; background: hsl(17, 70%, 45%);"></span></div></td>
+<td>21.35</td>
+<td>46</td>
+<td>Recent</td>
+<td class="col-conn">Jonathan Barlow · Miss Ellie Callwood(7)</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<div class="meta-line"><a href="#top">Back to top</a></div>
+</div></section>
+</main>
+<script>
+(function () {
+  var raceIndex = [{"course": "Pontefract", "off": "2:30", "race_name": "Malcolm Prescott 80th Birthday Maiden Stakes (GBB Race)", "anchor": "2026-07-26-pontefract-2-30-malcolm-prescott-80th-birthday-maiden-stakes-gbb-race", "confidence_bucket": 8, "cons_v11": 1, "cons_v12": 1, "cons_v17": 1}, {"course": "Pontefract", "off": "3:00", "race_name": "BYD Wakefield British EBF Stallion Studs Maiden Stakes (GBB Race)", "anchor": "2026-07-26-pontefract-3-00-byd-wakefield-british-ebf-stallion-studs-maiden-stakes-gbb-race", "confidence_bucket": 6, "cons_v11": 1, "cons_v12": 1, "cons_v17": 0}, {"course": "Pontefract", "off": "3:30", "race_name": "Trevor Woods Memorial Handicap", "anchor": "2026-07-26-pontefract-3-30-trevor-woods-memorial-handicap", "confidence_bucket": 7, "cons_v11": 1, "cons_v12": 0, "cons_v17": 0}, {"course": "Pontefract", "off": "4:00", "race_name": "William Hill Pomfret Stakes (Listed Race)", "anchor": "2026-07-26-pontefract-4-00-william-hill-pomfret-stakes-listed-race", "confidence_bucket": 7, "cons_v11": 0, "cons_v12": 1, "cons_v17": 0}, {"course": "Pontefract", "off": "4:30", "race_name": "Pontefract And District Golf Club Ltd Handicap (GBBPlus Race)", "anchor": "2026-07-26-pontefract-4-30-pontefract-and-district-golf-club-ltd-handicap-gbbplus-race", "confidence_bucket": 7, "cons_v11": 0, "cons_v12": 1, "cons_v17": 1}, {"course": "Pontefract", "off": "5:00", "race_name": "Roy Winstanley Memorial Raising Encephalitis Awareness Handicap", "anchor": "2026-07-26-pontefract-5-00-roy-winstanley-memorial-raising-encephalitis-awareness-handicap", "confidence_bucket": 7, "cons_v11": 0, "cons_v12": 1, "cons_v17": 0}, {"course": "Pontefract", "off": "5:30", "race_name": "Sarah Gusterson Memorial Handicap", "anchor": "2026-07-26-pontefract-5-30-sarah-gusterson-memorial-handicap", "confidence_bucket": 7, "cons_v11": 0, "cons_v12": 1, "cons_v17": 0}, {"course": "Uttoxeter", "off": "2:12", "race_name": "QuinnBet Daily Free Bet Juvenile Hurdle (GBB Race)", "anchor": "2026-07-26-uttoxeter-2-12-quinnbet-daily-free-bet-juvenile-hurdle-gbb-race", "confidence_bucket": 10, "cons_v11": 1, "cons_v12": 1, "cons_v17": 0}, {"course": "Uttoxeter", "off": "2:42", "race_name": "Roys Ices Mares' Handicap Hurdle", "anchor": "2026-07-26-uttoxeter-2-42-roys-ices-mares-handicap-hurdle", "confidence_bucket": 7, "cons_v11": 1, "cons_v12": 0, "cons_v17": 0}, {"course": "Uttoxeter", "off": "3:12", "race_name": "CL Cleaning Services Ken Boulton Memorial Handicap Hurdle", "anchor": "2026-07-26-uttoxeter-3-12-cl-cleaning-services-ken-boulton-memorial-handicap-hurdle", "confidence_bucket": 8, "cons_v11": 0, "cons_v12": 1, "cons_v17": 0}, {"course": "Uttoxeter", "off": "3:42", "race_name": "Sheila And Wayne Golden Wedding Anniversary Handicap Chase (GBB Race)", "anchor": "2026-07-26-uttoxeter-3-42-sheila-and-wayne-golden-wedding-anniversary-handicap-chase-gbb-race", "confidence_bucket": 7, "cons_v11": 1, "cons_v12": 1, "cons_v17": 0}, {"course": "Uttoxeter", "off": "4:12", "race_name": "Gary And Mavis Bird Family Raceday Handicap Hurdle (GBB Race)", "anchor": "2026-07-26-uttoxeter-4-12-gary-and-mavis-bird-family-raceday-handicap-hurdle-gbb-race", "confidence_bucket": 5, "cons_v11": 0, "cons_v12": 1, "cons_v17": 0}, {"course": "Uttoxeter", "off": "4:42", "race_name": "Sun Racing Summer Jumps Championship Handicap Chase (Arc Summer Chase Series Qualifier) (GBB Race)", "anchor": "2026-07-26-uttoxeter-4-42-sun-racing-summer-jumps-championship-handicap-chase-arc-summer-chase-series-qualifier-gbb-race", "confidence_bucket": 7, "cons_v11": 0, "cons_v12": 1, "cons_v17": 0}, {"course": "Uttoxeter", "off": "5:12", "race_name": "QuinnBet Handicap Hurdle (Div I)", "anchor": "2026-07-26-uttoxeter-5-12-quinnbet-handicap-hurdle-div-i", "confidence_bucket": 9, "cons_v11": 1, "cons_v12": 0, "cons_v17": 0}, {"course": "Uttoxeter", "off": "5:42", "race_name": "QuinnBet Handicap Hurdle (Div II)", "anchor": "2026-07-26-uttoxeter-5-42-quinnbet-handicap-hurdle-div-ii", "confidence_bucket": 9, "cons_v11": 1, "cons_v12": 1, "cons_v17": 0}];
+  function initFilters() {
+    try {
+      var trackEl = document.getElementById('track-filter');
+      var confEl = document.getElementById('confidence-filter');
+      var consV11El = document.getElementById('cons-v11');
+      var consV12El = document.getElementById('cons-v12');
+      var consV17El = document.getElementById('cons-v17');
+      var consModeEl = document.getElementById('cons-mode');
+      var raceEl = document.getElementById('race-jump');
+      var noMsgEl = document.getElementById('no-races-message');
+      var raceEls = document.querySelectorAll('section.race[id]');
+      var courseEls = document.querySelectorAll('.course-title[data-course-title]');
+      if (!trackEl || !confEl || !consV11El || !consV12El || !consV17El || !consModeEl || !raceEl) return;
+      document.body.classList.add('filters-live');
+      function jumpTo(anchor) {
+        if (!anchor) return;
+        var node = document.getElementById(anchor);
+        if (!node) return;
+        try { node.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        catch (e) { node.scrollIntoView(true); }
+        if (window.history && window.history.replaceState) {
+          try { window.history.replaceState(null, '', '#' + anchor); } catch (e2) {}
+        }
+      }
+      function selectedModels() {
+        var models = [];
+        if (consV11El.checked) models.push('v11');
+        if (consV12El.checked) models.push('v12');
+        if (consV17El.checked) models.push('v17');
+        return models;
+      }
+      function rowPasses(row) {
+        if (trackEl.value !== 'all' && row.course !== trackEl.value) return false;
+        if (confEl.value !== 'all') {
+          var minConf = parseInt(confEl.value, 10);
+          var rowConf = parseInt(row.confidence_bucket, 10);
+          if (isNaN(rowConf) || rowConf < minConf) return false;
+        }
+        var models = selectedModels();
+        if (!models.length) return true;
+        var flags = [];
+        for (var i = 0; i < models.length; i++) {
+          var m = models[i];
+          if (m === 'v11') flags.push(!!row.cons_v11);
+          else if (m === 'v12') flags.push(!!row.cons_v12);
+          else flags.push(!!row.cons_v17);
+        }
+        if (consModeEl.value === 'all') {
+          for (var a = 0; a < flags.length; a++) { if (!flags[a]) return false; }
+          return true;
+        }
+        for (var o = 0; o < flags.length; o++) { if (flags[o]) return true; }
+        return false;
+      }
+      function applyFilters() {
+        var visibleRows = [];
+        var visibleAnchors = {};
+        var visibleCourses = {};
+        for (var r = 0; r < raceIndex.length; r++) {
+          var row = raceIndex[r];
+          if (rowPasses(row)) {
+            visibleRows.push(row);
+            visibleAnchors[row.anchor] = true;
+            visibleCourses[row.course] = true;
+          }
+        }
+        for (var i = 0; i < raceEls.length; i++) {
+          var re = raceEls[i];
+          re.style.display = visibleAnchors[re.id] ? '' : 'none';
+        }
+        for (var j = 0; j < courseEls.length; j++) {
+          var ce = courseEls[j];
+          var c = ce.getAttribute('data-course-title') || '';
+          ce.style.display = visibleCourses[c] ? '' : 'none';
+        }
+        raceEl.innerHTML = '';
+        if (!visibleRows.length) {
+          var empty = document.createElement('option');
+          empty.value = '';
+          empty.textContent = 'No races';
+          raceEl.appendChild(empty);
+          raceEl.disabled = true;
+          if (noMsgEl) noMsgEl.style.display = '';
+          return '';
+        }
+        if (noMsgEl) noMsgEl.style.display = 'none';
+        raceEl.disabled = false;
+        var prompt = document.createElement('option');
+        prompt.value = '';
+        prompt.textContent = 'Select race';
+        raceEl.appendChild(prompt);
+        for (var k = 0; k < visibleRows.length; k++) {
+          var rr = visibleRows[k];
+          var opt = document.createElement('option');
+          opt.value = rr.anchor;
+          var prefix = trackEl.value === 'all' ? (rr.course + ' · ') : '';
+          opt.textContent = prefix + rr.off + ' ' + rr.race_name;
+          raceEl.appendChild(opt);
+        }
+        return visibleRows[0].anchor || '';
+      }
+      function onFilterChange() {
+        applyFilters();
+      }
+      function bindFilterEvents(el) {
+        if (!el) return;
+        el.addEventListener('change', onFilterChange);
+        el.addEventListener('input', onFilterChange);
+        el.addEventListener('touchend', onFilterChange);
+        if (el.type === 'checkbox') el.addEventListener('click', onFilterChange);
+      }
+      window.hoofsJumpTo = jumpTo;
+      window.hoofsApplyFilters = applyFilters;
+      window.hoofsOnFilterChange = onFilterChange;
+      raceEl.addEventListener('change', function () { jumpTo(raceEl.value); });
+      raceEl.addEventListener('input', function () { jumpTo(raceEl.value); });
+      raceEl.addEventListener('touchend', function () { jumpTo(raceEl.value); });
+      var filterEls = [trackEl, confEl, consV11El, consV12El, consV17El, consModeEl];
+      for (var x = 0; x < filterEls.length; x++) {
+        bindFilterEvents(filterEls[x]);
+      }
+      applyFilters();
+    } catch (err) {
+      window.hoofsFilterError = String(err && err.message ? err.message : err);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFilters);
+  } else {
+    initFilters();
+  }
+})();
+</script>
+</body></html>
